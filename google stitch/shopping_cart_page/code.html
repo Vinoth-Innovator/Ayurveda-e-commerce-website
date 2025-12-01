@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Cart</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style type="text/tailwindcss">
+        @layer base {
+            :root {
+                --primary: #8A9A5B;
+                --background-light: #FCFBF9;
+                --background-dark: #221c10;
+                --warm-beige: #F4EFEA;
+                --charcoal: #343a40;
+                --terracotta: #E59866;
+            }
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "var(--primary)",
+              "background-light": "var(--background-light)",
+              "background-dark": "var(--background-dark)",
+              "warm-beige": "var(--warm-beige)",
+              "charcoal": "var(--charcoal)",
+              "terracotta": "var(--terracotta)",
+            },
+            fontFamily: {
+              "display": ["Lato", "sans-serif"],
+              "heading": ["Playfair Display", "serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&amp;family=Playfair+Display:wght@700;900&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light text-charcoal group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-warm-beige px-4 sm:px-10 lg:px-20 py-4 font-display">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+<h2 class="text-charcoal text-xl font-bold font-heading leading-tight tracking-[-0.015em]">Ayurveda Wellness</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9">
+<a class="text-charcoal text-sm font-medium leading-normal" href="#">Shop</a>
+<a class="text-charcoal text-sm font-medium leading-normal" href="#">About</a>
+<a class="text-charcoal text-sm font-medium leading-normal" href="#">Yoga</a>
+<a class="text-charcoal text-sm font-medium leading-normal" href="#">Wellness</a>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="relative flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-warm-beige text-charcoal text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined">shopping_bag</span>
+<div class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">2</div>
+</button>
+<button class="hidden sm:flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-warm-beige text-charcoal text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<main class="px-4 sm:px-10 lg:px-20 py-8 lg:py-16">
+<div class="mx-auto flex max-w-7xl flex-col gap-8">
+<div class="flex flex-col gap-4">
+<div class="flex flex-wrap gap-2">
+<a class="text-primary text-sm font-medium leading-normal" href="#">Home</a>
+<span class="text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-primary text-sm font-medium leading-normal" href="#">Shop</a>
+<span class="text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-charcoal text-sm font-medium leading-normal">Shopping Cart</span>
+</div>
+<div class="flex flex-wrap justify-between gap-3"><p class="text-charcoal text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em] min-w-72 font-heading">My Cart</p></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+<div class="lg:col-span-2 flex flex-col gap-4">
+<div class="hidden sm:grid grid-cols-6 gap-4 border-b border-warm-beige pb-2 text-sm text-gray-500 font-bold uppercase tracking-wider">
+<div class="col-span-3">Product</div>
+<div class="col-span-1 text-right">Price</div>
+<div class="col-span-1 text-center">Quantity</div>
+<div class="col-span-1 text-right">Subtotal</div>
+</div>
+<div class="flex flex-col divide-y divide-warm-beige">
+<div class="grid grid-cols-1 sm:grid-cols-6 gap-4 py-6 items-center">
+<div class="col-span-1 sm:col-span-3 flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px] sm:size-[90px] flex-shrink-0" data-alt="Bottle of Ashwagandha tablets" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASVZqm-iQkmsGFi5VvOJ21RMjiAugFJzUM5IEZvtEWFAFeQqmAhpjXcLXBc9SzW-83A1zp7h5Nu-4NbEh0dL4YPjXnOOoOvC_uAjk3bJAs7HmZZQAxnoZUHeI5PJVaXDeriol7ZEeFNAtyYYxwAIYyRVQmvNN9hcFlBGktmAsW031vgy8iNJ_42I6YDx1rRcKpnGzpntzXZYEUy2jsT8czEWWdMjEiaKR56en4zKqxbRBZ_VIJqOinnFTTjUSJ5HJH7v_h-qNPs00");'></div>
+<div class="flex flex-1 flex-col justify-center gap-1">
+<a class="text-charcoal text-base font-bold leading-normal hover:text-primary" href="#">Ashwagandha Tablets</a>
+<p class="text-gray-500 text-sm font-normal leading-normal">60 tablets</p>
+<button class="text-terracotta text-xs font-medium hover:underline text-left mt-1">Remove</button>
+</div>
+</div>
+<div class="hidden sm:flex col-span-1 justify-end items-center">
+<p class="text-primary text-base font-medium leading-normal">₹1200.00</p>
+</div>
+<div class="col-span-1 flex justify-center items-center">
+<div class="flex items-center gap-2 text-charcoal w-28 border border-warm-beige rounded-full py-1 px-2">
+<button class="text-lg font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full text-gray-500 cursor-pointer hover:bg-warm-beige">-</button>
+<input class="text-base font-medium leading-normal w-full p-0 text-center bg-transparent focus:outline-0 focus:ring-0 focus:border-none border-none [appearance:textfield] [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" type="number" value="1"/>
+<button class="text-lg font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full text-gray-500 cursor-pointer hover:bg-warm-beige">+</button>
+</div>
+</div>
+<div class="hidden sm:flex col-span-1 justify-end items-center">
+<p class="text-charcoal text-base font-bold w-20 text-right">₹1200.00</p>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-6 gap-4 py-6 items-center">
+<div class="col-span-1 sm:col-span-3 flex items-start gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-[70px] sm:size-[90px] flex-shrink-0" data-alt="Pouch of Organic Triphala Powder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcDxROwB1fc-s2JNHeJ_jxJ5P6bLynoDyBV4HRs5wvyqFz--iAVFIfLAiK2S_uEFLQlh7d1p_x-ZIZVdk8wM-RGGIo0GgunEypz8wANPDGi4LPfdGU1clPobGts7sTtXptuWe65AkJPwDak9qoPO6ZNkYtmwEAMX-8iOrwkWkF3IjBiKXU0RiXf_rFzzXyLEk1ksLRG9CPM0P0gOXkURVLe7RkTI3_G2Wlbu-z5FEa7eT2ePAj3jScWwxEjcb8zMUlnW9RStxZ7M4");'></div>
+<div class="flex flex-1 flex-col justify-center gap-1">
+<a class="text-charcoal text-base font-bold leading-normal hover:text-primary" href="#">Organic Triphala Powder</a>
+<p class="text-gray-500 text-sm font-normal leading-normal">100g</p>
+<button class="text-terracotta text-xs font-medium hover:underline text-left mt-1">Remove</button>
+</div>
+</div>
+<div class="hidden sm:flex col-span-1 justify-end items-center">
+<p class="text-primary text-base font-medium leading-normal">₹925.00</p>
+</div>
+<div class="col-span-1 flex justify-center items-center">
+<div class="flex items-center gap-2 text-charcoal w-28 border border-warm-beige rounded-full py-1 px-2">
+<button class="text-lg font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full text-gray-500 cursor-pointer hover:bg-warm-beige">-</button>
+<input class="text-base font-medium leading-normal w-full p-0 text-center bg-transparent focus:outline-0 focus:ring-0 focus:border-none border-none [appearance:textfield] [&amp;::-webkit-inner-spin-button]:appearance-none [&amp;::-webkit-outer-spin-button]:appearance-none" type="number" value="2"/>
+<button class="text-lg font-medium leading-normal flex h-7 w-7 items-center justify-center rounded-full text-gray-500 cursor-pointer hover:bg-warm-beige">+</button>
+</div>
+</div>
+<div class="hidden sm:flex col-span-1 justify-end items-center">
+<p class="text-charcoal text-base font-bold w-20 text-right">₹1850.00</p>
+</div>
+</div>
+</div>
+<div class="flex justify-start pt-4">
+<a class="flex items-center gap-2 text-primary font-bold hover:underline" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+                                    Continue Shopping
+                                </a>
+</div>
+</div>
+<aside class="lg:col-span-1">
+<div class="bg-warm-beige/50 p-6 lg:p-8 rounded-lg flex flex-col gap-6 sticky top-8">
+<h3 class="text-2xl font-bold font-heading text-charcoal">Order Summary</h3>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center text-charcoal">
+<span>Subtotal</span>
+<span class="font-bold">₹3050.00</span>
+</div>
+<div class="flex justify-between items-center text-green-700 text-sm">
+<span>Discount (WELCOME10)</span>
+<span class="font-bold">-₹305.00</span>
+</div>
+<div class="flex justify-between items-center text-charcoal">
+<span>Shipping</span>
+<span class="font-bold">Free</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-charcoal" for="discount-code">Promo Code</label>
+<div class="flex gap-2">
+<input class="flex-grow rounded-md border-warm-beige focus:ring-primary focus:border-primary text-sm" id="discount-code" placeholder="Enter code" type="text" value="WELCOME10"/>
+<button class="px-4 py-2 rounded-md bg-primary/80 text-white font-bold hover:bg-primary text-sm">Apply</button>
+</div>
+</div>
+<div class="flex justify-between items-center text-charcoal text-xl border-t border-warm-beige pt-4">
+<span class="font-bold">Grand Total</span>
+<span class="font-black">₹2745.00</span>
+</div>
+<div class="flex flex-col gap-4">
+<button class="w-full bg-primary text-white font-bold py-3 rounded-lg text-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+                                    Proceed to Checkout
+                                </button>
+<div class="flex flex-col items-center gap-3">
+<div class="flex items-center gap-2 text-gray-500 text-sm">
+<span class="material-symbols-outlined text-base">lock</span>
+<span>SSL Secure Checkout</span>
+</div>
+<div class="flex items-center gap-3">
+<img alt="Visa" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBbFjNiFsGBteCkS2SCdg2RVbSzeajuWnkuWIqfb7WT4LFwO-0dTBViANQPgB-zqrU2fsoUVSPDZ3Gcb8PiaGYKWb4DJoUnAVfNWXe2ek0WK-clhbhKdkDcA0qyU9zxeYOLSVdvtZLx70E-jrs68wn2o80eVf4grFpltPzipqfoam4av3g4qVPt5J7OWqJ8DOgW0cznMK0qO1hoTCHPMBP-RhjtiJ1rleBP2FwNdrKjV3vyBCXnK0-bNcjv4AtmDpiU9A9y9i0CdQ"/>
+<img alt="Mastercard" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgc__nHsfOEFK8hRuCWeFQ3AaOa_faD1pr000PnCnSWC5HseFBaRvoOP5bEf_lgRAz4co7kXzii-w0k9RcvEgWmKL_7JSPycJZDn4MBoO8SaPXEl-y_2eL3bxWywi7hpikwzXBCOaLBB3zyhyFv6Z1rdsBjHrKqpAlrziSfxyN08-vXML4x9PglThmAUhQZSr566s3Km3gq_jddbu1D7MBbjB8_STb6Y21g7zjgqT592zcrf7PN2KtYlAHC1OI5onVfYVccT2GMec"/>
+<img alt="PayPal" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCciyOCAO8P8AV5osT8_JNF8hZBGgpIdpdEAb7EeIFJRmPk7dNE2yhaGjhXIsobLMKHoXq8hiFcwUr7CA_A3365A44oW6MPHZHCK3G1uHC8w4rsICE8utxUkeA8zdu4lfHnmCMSVJObbnw84X9dqGhgGs8p-pktdPJ6xlhsyfWXmQCSPNOD_CU_wrZwSVdRXGSNKcUIfxOcVYMi1kBBOwYxN9JkR05U8EgdyyIzCoLS95mxTeSpmJ6tU3_Hq9lkEFIBDAkCpTWKKQ"/>
+<img alt="American Express" class="h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8g8g2zN3LfzUOGLNhMlS5cQeE7nNCpGdSE1tJlgr5si7KST0y8FQq6EoOb6J_EC4NroX3cIK0dsIuF2D8NWCmpv1R-3Xp0ryj1amI7VsojnAM6JYTqxA5LBXqg6wprz3c7Hdnd29d7K5FuEQr43ZUqzv0nnH5rnHSnZysHoCu2gc3v6hAx8qiQZZwySrnpIazFgSKufiotttqTzEEXgMqQe_XzAHePIMRjfmeteqjCozfEKPZcLpqKcCrFUFjDAJbArcPIlfzQ2c"/>
+</div>
+</div>
+</div>
+<div class="bg-primary/10 text-primary-darker p-3 rounded-lg text-sm text-center font-medium">
+                                You've got free shipping!
+                            </div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

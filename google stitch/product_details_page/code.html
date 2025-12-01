@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Details Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#f4af25",
+              "background-light": "#f8f7f5",
+              "background-dark": "#221c10",
+              "brand": {
+                  "green": "#556B2F",
+                  "orange": "#E59866",
+                  "brown": "#3D2B1F",
+              }
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 lg:px-10 xl:px-40 flex justify-center py-5 border-b border-black/10 dark:border-white/10">
+<div class="layout-content-container flex flex-col w-full max-w-7xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap px-4 lg:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-brand-brown dark:text-background-light">
+<div class="size-6 text-brand-green dark:text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Ayurveda Wellness</h2>
+</div>
+</div>
+<div class="hidden lg:flex flex-1 justify-center gap-8">
+<div class="flex items-center gap-9 text-brand-brown dark:text-background-light">
+<a class="text-sm font-medium leading-normal" href="#">Shop</a>
+<a class="text-sm font-medium leading-normal" href="#">Yoga</a>
+<a class="text-sm font-medium leading-normal" href="#">Wellness Hub</a>
+<a class="text-sm font-medium leading-normal" href="#">About Us</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent text-brand-brown dark:text-background-light gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent text-brand-brown dark:text-background-light gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent text-brand-brown dark:text-background-light gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAafW6Vo45qm1MMoi9kiyviVm1RewkUJF3GHT6cNxM41OvCk90T5ltA2lK8B3MMWWtsO_l1fGJc0pdOUO7J89Fk9N5pnpTEL5QKC-aWRGPd6YaxcfN40LLP5oid4TxYptRhfw5QS5kq-sFj_JmLb_TlHXSXhSM7qg8bDkOr4BDZQAHHVgwZebdPxjT6fDab2nVJaXIgpteLwIMNKI7rDP8qTDKzv_FN0Y7I9GYyGnYQ9PNxZxsAndnneB-sLwYtYLVzyHjRM2d0zxs");'></div>
+</div>
+</header>
+</div>
+</div>
+<div class="px-4 lg:px-10 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-7xl flex-1 gap-8">
+<div class="flex flex-wrap gap-2 px-4">
+<a class="text-brand-brown/70 dark:text-background-light/70 text-sm font-medium leading-normal" href="#">Home</a>
+<span class="text-brand-brown/70 dark:text-background-light/70 text-sm font-medium leading-normal">/</span>
+<a class="text-brand-brown/70 dark:text-background-light/70 text-sm font-medium leading-normal" href="#">Shop</a>
+<span class="text-brand-brown/70 dark:text-background-light/70 text-sm font-medium leading-normal">/</span>
+<a class="text-brand-brown/70 dark:text-background-light/70 text-sm font-medium leading-normal" href="#">Herbal Teas</a>
+<span class="text-brand-brown/70 dark:text-background-light/70 text-sm font-medium leading-normal">/</span>
+<span class="text-brand-brown dark:text-background-light text-sm font-medium leading-normal">Calming Chamomile Blend</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-4">
+<div class="flex flex-col gap-4">
+<div class="relative group w-full cursor-pointer">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl" data-alt="Main image of Calming Chamomile Blend tea package" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrZXzzPVDRJKKsyh9uImWWuIMyYcJTepPfPdpN-B7jC_DAfsLa3jRDrihHO01_1gC1KbdIuoJIW6J-mbIF4uN_zP3HakB_edTYqawdIY7Ml1nSZlK-CHnWzaeOAHPhr84fGiz9Q5vKszQUbLBn1TC8OJWkUYlYFkTMiw8WbNRm6LA0OZ5hRdWGAL3W3VyC1krfhHst3GFnq7-6NkOb0Sw7nE0nBFkuD1dcBhKhNUbcZ28BPvSeUOaAEmunJ68T7w36eBYGad0rxMg");'></div>
+<div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-xl">
+<span class="material-symbols-outlined text-white text-5xl">zoom_in</span>
+</div>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(80px,1fr))] gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg cursor-pointer border-2 border-brand-green" data-alt="Thumbnail of tea leaves" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAS4y_BFEdxzuS3xUbObUu5RECrtt6DQGZE5yF3BhY2FycR2ffolDXot1VAVU2LybinOpUZ4jSMT0FUFAMnj5sI2lhB9grFduT72Y7lQUBNB2CeDkHTGfCXwI_8Gnvru3I4N9CTVapsl25Whpj6imvZujofkT4axmX4Zd1WGg3SjMCKGglvX6w3AB7t2oDbrAHxaRq1e9gkPj9OLn6Qf5T7v9drzPN9YsiicB7pQp40ffC3YAJH1NOSl0G7_7fhO86JRMhRo2m7VVI");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-brand-green/50" data-alt="Thumbnail of prepared tea in a cup" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsQ2Qegr0G3yZXktyTQUBgj2hVzUbiwilj1IrdquUQgGjVbh8TP48z7Y3wv_b47C4i0QOdZ58KDyX_aIMR9dgDRJAg7zlp36xVjVIMyELnOsfiBFx--mkvlwYLNF0-rdUvekY_IgvE9nE-cv7Sjtt8VvFWHDbwRv6JhQ26P3DD8DLnm00a0GrlmL4mjYKvV6oIetN62IkGxguPkKJCY-obp-psNbFt9hLGZyTMUBi8FUUkv9d4d8jFcm3j_Dof4xt4ngcZ8nW35qc");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-brand-green/50" data-alt="Thumbnail of chamomile flowers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC03JG7v8niPimC9poaZaZjlBjxQwXPOiwQoJiMHvOtxBgVpT5hCKoO3NjMTmLMYrN4giczW_Le_FOMqCZomodaEU1StE0RI-uv-GmWH7v6rJiqg1q0NN35S0Gg0HxQxIKYKytpX42YcuP9XaKY7C_clUtUroYo5q6RWU6XQiLwrCuG4Wt1wwp5Oj387rlf8i_RWNC3I-7PlWn4dzDZoLe74U2oayb49NB0jUBS4tTeangKF3xsHFsg-Z8ArY6e1Mnjl9slhRi7aUs");'></div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-brand-green/50" data-alt="Thumbnail of tea packaging detail" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC49rkkGy8er4R5pwSRqipCyxAXfoKb8juwAApoR_-XbZbtaxwq97Gfj9I7DZxKFtnHiWLn3mP7A2EAhaJkkWpEAM2LS_TgnHCSqMXwLJS0DzhtRuK1TmybmHR5JMrIdM-jOJO5YxDD_86V9FvVP3KxnIIESHzCU81Hh4vtSmICYREJuEuTqMYzKSRyKI-ikKQ2qCmtnO6B8I0r-wKSYQbcaWEbsuNT_tVKq7ZVD5qMVPfvJC3eJXjgagvZYP3mMPqyJWggIJVvaOw");'></div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h1 class="text-brand-brown dark:text-background-light text-4xl font-black leading-tight tracking-[-0.033em]">Calming Chamomile Blend</h1>
+<p class="text-brand-brown/80 dark:text-background-light/80 text-base leading-relaxed">A soothing, organic herbal infusion to promote relaxation and restful sleep. Hand-picked chamomile flowers blended with hints of lavender and lemon balm.</p>
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined">star_half</span>
+</div>
+<a class="text-sm font-medium text-brand-brown/80 dark:text-background-light/80 hover:underline" href="#reviews">125 customer reviews</a>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-baseline gap-3">
+<span class="text-brand-brown dark:text-background-light text-3xl font-bold">$18.00</span>
+<span class="text-brand-orange text-lg font-semibold line-through">$22.00</span>
+</div>
+<div class="bg-brand-green/10 text-brand-green dark:bg-primary/20 dark:text-primary-dark font-semibold px-3 py-1 rounded-md text-sm">
+Special Offer: Buy 2, get 10% off!
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<label class="font-semibold text-brand-brown dark:text-background-light" for="size-selector">Size</label>
+<div class="flex gap-2">
+<button class="px-5 py-2 rounded-lg border border-brand-green bg-brand-green/10 text-brand-green dark:border-primary dark:bg-primary/20 dark:text-primary font-medium">50g</button>
+<button class="px-5 py-2 rounded-lg border border-black/20 dark:border-white/20 text-brand-brown/70 dark:text-background-light/70 font-medium">100g</button>
+<button class="px-5 py-2 rounded-lg border border-black/20 dark:border-white/20 text-brand-brown/70 dark:text-background-light/70 font-medium">250g</button>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<p class="text-brand-brown dark:text-background-light font-semibold">Quantity</p>
+<div class="flex items-center rounded-lg border border-black/10 dark:border-white/10">
+<button class="px-3 py-2 text-brand-brown/60 dark:text-background-light/60 hover:text-brand-brown dark:hover:text-background-light">-</button>
+<span class="px-4 py-2 text-brand-brown dark:text-background-light font-medium">1</span>
+<button class="px-3 py-2 text-brand-brown/60 dark:text-background-light/60 hover:text-brand-brown dark:hover:text-background-light">+</button>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full">
+<button class="flex-1 flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-brand-orange text-brand-brown font-bold gap-2 text-base leading-normal tracking-[0.015em] px-6 shadow-md hover:shadow-lg transition-shadow">Add to Cart</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 border border-brand-green text-brand-green dark:border-primary dark:text-primary gap-2 text-base font-bold leading-normal tracking-[0.015em] px-4">
+<span class="material-symbols-outlined">favorite_border</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 px-4 py-10 border-t border-b border-black/10 dark:border-white/10">
+<h2 class="text-3xl font-bold text-brand-brown dark:text-background-light">Ingredients &amp; Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-brand-brown/90 dark:text-background-light/90">
+<div>
+<h3 class="font-bold text-lg mb-2 text-brand-brown dark:text-background-light">Key Ayurvedic Herbs</h3>
+<ul class="list-disc list-inside space-y-1">
+<li>Organic Chamomile (Matricaria recutita)</li>
+<li>Lavender (Lavandula)</li>
+<li>Lemon Balm (Melissa officinalis)</li>
+<li>Peppermint (Mentha piperita)</li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-2 text-brand-brown dark:text-background-light">Usage / Dosage</h3>
+<p>Steep 1 teaspoon of tea blend in 8oz of hot water (not boiling) for 5-7 minutes. Enjoy 30 minutes before bedtime or as needed for relaxation.</p>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-2 text-brand-brown dark:text-background-light">Certifications</h3>
+<div class="flex items-center gap-4">
+<img class="h-12 w-12" data-alt="AYUSH certification badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANR3DcLOGA-P01nd9f16MrBwAF-6ESzlZq6vQ34EMfyP0vHX8p7SIyGmzX-g-ZyLGgXrRmS9u-um3Y4M2fcYUBNfDRsnfMvuaFI-qA13W4IJfG-RXHGR9WTT2hjkglcXqg0hS0KXb5o4GAotIPLdmGwZzqo6_I-YbTKni1xYqoTCKM5_Qup_Xi5tPPBNQTPeRQdVmdaKXc3ku2Swh7FziY_b_SHQiAvnbf4U_ja-RhOCl0X5MFHyo-HuaN2ILcV7feAqAQP24ViSY"/>
+<img class="h-12 w-12" data-alt="GMP certification badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwOwNDXujdsdIJ8fHLN8w2cOdH-5n5ZGgrldR0sxtEPBua_-dmUOL9TPN4EGyVPtRFKEMHbD9g3hbosw6Azbe1yOedNS8zy9pl8OVR8lD9lQiyuobEBXJeGkPJq3PkDl165PjpklkXd4Zptjr4ZiV9ZMnGEJKtj50kA7XXbSwQH8tYErGkF9cz8srgMCEczfapWyY_LWDwm-gaiQrFOczzLNeq1vznjBFWEQt5NHndIidfhdC-vqezD6WpWpYuWhflmmOmtj4GAJs"/>
+<img class="h-12 w-12" data-alt="USDA Organic certification badge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYkwoSkBuq7w6rqUY-4_ZiOsZ7lJT6bb1Dc8Y5nBpfnadR4kpuxgoL4CIJ3N56m6XG66I0U9amiHwc3414TT1yRmChVlH3cvAWDJOy-mART_7TUHRZ5dvYbSY5o0BYppehx7p5Vf70AthaZfcwSj1C9zXXVxQ1MnOgrEysrL9UeFrjkHKS4nGdMGKMyUjnxUiiIh4qppYgH_jpvgtWEDzFEDVMZDX87gpdSufS-fT_DILIhQY3B0feAWscq9WN_hmFFsY7yej4sIk"/>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 px-4 py-10">
+<div class="flex border-b border-black/10 dark:border-white/10">
+<button class="px-4 py-3 text-brand-brown dark:text-background-light font-semibold border-b-2 border-brand-green dark:border-primary">Description</button>
+<button class="px-4 py-3 text-brand-brown/70 dark:text-background-light/70 font-medium">How to Use</button>
+<button class="px-4 py-3 text-brand-brown/70 dark:text-background-light/70 font-medium">Reviews</button>
+<button class="px-4 py-3 text-brand-brown/70 dark:text-background-light/70 font-medium">FAQ</button>
+</div>
+<div class="prose prose-lg text-brand-brown/90 dark:text-background-light/90 max-w-none">
+<p>Discover tranquility in every cup with our Calming Chamomile Blend. Sourced from the pristine valleys of the Himalayas, this tea is a testament to the ancient wisdom of Ayurveda. We've carefully selected the finest organic chamomile flowers, known for their natural calming properties, and combined them with soothing lavender and uplifting lemon balm.</p>
+<ul class="list-disc list-inside">
+<li>Promotes relaxation and restful sleep.</li>
+<li>Soothes the nervous system.</li>
+<li>Caffeine-free and 100% organic.</li>
+<li>Aids in digestion and reduces stress.</li>
+</ul>
+<p>This infusion is perfect for unwinding after a long day, preparing for a peaceful night's sleep, or simply finding a moment of calm in your busy life. Embrace the gentle power of nature and let this aromatic blend restore your balance and harmony.</p>
+</div>
+</div>
+<div class="flex flex-col gap-8 px-4 py-10" id="reviews">
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<div class="flex flex-col gap-2">
+<h2 class="text-3xl font-bold text-brand-brown dark:text-background-light">Customer Reviews</h2>
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-xl">star_half</span>
+</div>
+<p class="font-semibold text-brand-brown dark:text-background-light">4.7 out of 5</p>
+</div>
+<p class="text-brand-brown/70 dark:text-background-light/70">Based on 125 reviews</p>
+</div>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 bg-brand-green/10 text-brand-green dark:bg-primary/20 dark:text-primary gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-5">Write a Review</button>
+</div>
+<div class="flex flex-col gap-6">
+<div class="p-6 rounded-lg border border-black/10 dark:border-white/10 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+</div>
+<p class="text-sm text-brand-brown/60 dark:text-background-light/60">June 15, 2024</p>
+</div>
+<h3 class="font-bold text-brand-brown dark:text-background-light">My go-to for a peaceful evening.</h3>
+<p class="text-base text-brand-brown/80 dark:text-background-light/80">This tea is absolutely wonderful. The aroma alone is relaxing, and the taste is delicate and soothing. It's become a non-negotiable part of my bedtime routine. Highly recommend!</p>
+<p class="text-sm font-medium text-brand-brown dark:text-background-light">- Sarah L.</p>
+</div>
+<div class="p-6 rounded-lg border border-black/10 dark:border-white/10 flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined text-lg">star</span>
+</div>
+</div>
+<p class="text-sm text-brand-brown/60 dark:text-background-light/60">May 28, 2024</p>
+</div>
+<h3 class="font-bold text-brand-brown dark:text-background-light">Great quality and taste.</h3>
+<p class="text-base text-brand-brown/80 dark:text-background-light/80">You can tell the ingredients are high quality. A very pleasant and calming tea. It's a bit pricey, but worth it for an organic product that actually works.</p>
+<p class="text-sm font-medium text-brand-brown dark:text-background-light">- Mark C.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 px-4 py-10">
+<h2 class="text-3xl font-bold text-brand-brown dark:text-background-light">You May Also Like</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Energizing Ginger-Turmeric Tea" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdXIR_qMmjyW6Br8xwhwQMRj8uqf6lUQMONfYxNcv1shKY0dZXqj3kFM0E1-X4Ny3nb0bxJOgeeLsBVbUmKu72KD2Rj_3bhEKJULn15HwExKombpIIcz_iAgvrfHwv-SKRIwWx7az0iRguvK7M8q0d6Jbma07B9hkEz4dJVkbN37OyUIvDxocqLM9Q4UCuENWYrO3dDWuBdEWCDmQ8r2iHrbdBggtCnBaAxuzREfka3IfxIywDRRM2s5xiXrqvshSrXFSYbvazq_w");'></div>
+<div class="flex flex-col">
+<h4 class="font-semibold text-brand-brown dark:text-background-light">Energizing Ginger-Turmeric Tea</h4>
+<p class="text-brand-brown/80 dark:text-background-light/80">$20.00</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Rejuvenating Ashwagandha Root Powder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7diuX4RornoYnr0aNnPvHFRQ9zUn-KDXceftrnt2pKbUWUrHLWkcOkRBm6tyNXAfFdggHgv0_6i8a3dH4fSCEeEdx6UKRggq2jXXdp-7hAFrLokQBPlaMD_EGM5C9ag97tApNqAvi62fiuhdvRpzH-KV6w3K7WCy-HO9onZvGbCpM9ZdAXPjLiGaOUPQc4Dpdoz1PmaUIM98CdAon2OjGN5W97Nhm1GfdkdyJth8NaboMDQpfgww_WVyOrPEjrSPAL3Jm3wL6jFU");'></div>
+<div class="flex flex-col">
+<h4 class="font-semibold text-brand-brown dark:text-background-light">Rejuvenating Ashwagandha Root</h4>
+<p class="text-brand-brown/80 dark:text-background-light/80">$25.00</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Soothing Lavender Bath Oil" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDk1-QSoAoOVjiXK2TTO-Cpw3RfIZLuJu78UF9Fxx05_pLcCUF5LCXsUWVCAZlfwSpgKd05__8UV5o8MXSmCh1cpI2S1W7-AHUJOAroQp0F01DpAiph1nn8nOcOggiYMx6sauft4Ch2JgLWVR9ubnI_FyOdMsEtsS8AwGVun8vdQyPdk_L1eBwata63HdJsjxAJU59JS0IeC8DsUcxaQPpnLNFGua1OsP6ut-37GCe6mNG1z5boJ1skgmqDyLmxgSzjpzUcOOdD7dA");'></div>
+<div class="flex flex-col">
+<h4 class="font-semibold text-brand-brown dark:text-background-light">Soothing Lavender Bath Oil</h4>
+<p class="text-brand-brown/80 dark:text-background-light/80">$32.00</p>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Pure Triphala Digestive Aid" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxJ8msHvjbmXg-FqPO2P3FI-XHi4RctzYpSRfGO3uES4ubibywflcctXhRqDHfUXtcr-ejmAn7-q4TwgFuzqTFyKmKBpZnj3m1RgNJuobwFbS28_3syF9TzvJEFUPInieUBYEmFpL1F42_xYP-C0c7ZR_wYaBe6h9-HsYUhst4rJJ4p8E_1h4GmbWxkXQ-_-9jOFzXokxHiy34xo5X6LOPaMKxcD8v3DVv_LOcgbpdZa67t5EVYDEnYBo0LlVGDP2GQ53efTJjcAk");'></div>
+<div class="flex flex-col">
+<h4 class="font-semibold text-brand-brown dark:text-background-light">Pure Triphala Digestive Aid</h4>
+<p class="text-brand-brown/80 dark:text-background-light/80">$28.00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

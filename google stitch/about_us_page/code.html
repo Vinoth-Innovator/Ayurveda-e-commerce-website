@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - Ayurveda Wellness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f4af25",
+                        "background-light": "#f8f7f5",
+                        "background-dark": "#221c10",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4efe7] dark:border-b-background-dark/20 px-4 sm:px-10 py-3">
+<div class="flex items-center gap-4 text-[#1c170d] dark:text-background-light">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-[#1c170d] dark:text-background-light text-lg font-bold leading-tight tracking-[-0.015em]">Ayurveda Wellness</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#1c170d] dark:text-background-light text-sm font-medium leading-normal" href="#">Home</a>
+<a class="text-[#1c170d] dark:text-background-light text-sm font-medium leading-normal" href="#">Shop</a>
+<a class="text-[#1c170d] dark:text-background-light text-sm font-bold leading-normal text-primary" href="#">Our Story</a>
+<a class="text-[#1c170d] dark:text-background-light text-sm font-medium leading-normal" href="#">Blog</a>
+<a class="text-[#1c170d] dark:text-background-light text-sm font-medium leading-normal" href="#">Contact</a>
+</div>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f4efe7] dark:bg-background-dark/50 text-[#1c170d] dark:text-background-light gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-[#1c170d] dark:text-background-light">person</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f4efe7] dark:bg-background-dark/50 text-[#1c170d] dark:text-background-light gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-[#1c170d] dark:text-background-light">shopping_cart</span>
+</button>
+</div>
+</div>
+<button class="md:hidden flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f4efe7] dark:bg-background-dark/50 text-[#1c170d] dark:text-background-light gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-[#1c170d] dark:text-background-light">menu</span>
+</button>
+</header>
+<main class="flex-1">
+<div class="flex flex-col gap-16 py-16 sm:gap-20 sm:py-20">
+<section class="px-4 @container">
+<div class="flex flex-col gap-8 md:flex-row md:items-center">
+<div class="flex flex-1 flex-col gap-4 text-center md:text-left">
+<h1 class="text-[#1c170d] dark:text-background-light text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Nurturing Balance, Naturally</h1>
+<p class="text-[#1c170d] dark:text-background-light/80 text-base font-normal leading-relaxed">Our journey began with a shared passion for Ayurveda's profound wisdom. Inspired by our ancestors' reliance on nature for healing, we set out to create a line of authentic, pure, and sustainable wellness products. We believe in holistic well-being, where the health of the individual is connected to the health of the planet.</p>
+</div>
+<div class="relative aspect-[4/3] flex-1">
+<img alt="Close up of green leaves with water droplets, signifying nature and purity." class="h-full w-full rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKQFDauhqyb7EuLrOzFEZk8lkB2PFrr3XnrMf8yVrBlXoy0Me-qu5DssunlNzHxAVg525wfGAHflj6nBnQGzM977SnxJwqeSN6w2L-RG2Habp2cCLxLQDhcizI2WulWLlk2jD77FGArIUussMZSDUZIVrM0X4ljaRAMw8vLh0SZrCNxcP6QS8Cc13SPpVkoyrOqvyRHwlQFlnzxRRVsSqKYx-3VY25SO8AmRP3NY5MB1lFzxMn72zZ-e5XCiaLG4bg67f0dNQTYYY"/>
+<div class="absolute -bottom-4 -right-4 hidden h-24 w-24 rounded-full bg-primary/20 p-2 sm:block">
+<div class="flex h-full w-full items-center justify-center rounded-full bg-primary/30">
+<span class="material-symbols-outlined text-4xl text-primary">spa</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-10 bg-[#f4efe7] px-4 py-16 dark:bg-background-dark/50 @container sm:py-20">
+<div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+<h2 class="text-3xl font-bold text-[#1c170d] dark:text-background-light">Our Core Values</h2>
+<p class="text-[#1c170d] dark:text-background-light/80">These principles are the heart of everything we do, guiding us in our mission to bring you the purest essence of Ayurvedic wellness.</p>
+</div>
+<div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+<div class="flex flex-col items-center gap-3 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<h3 class="text-xl font-bold text-[#1c170d] dark:text-background-light">Authenticity</h3>
+<p class="text-sm text-[#1c170d] dark:text-background-light/80">Honoring traditional Ayurvedic recipes and practices.</p>
+</div>
+<div class="flex flex-col items-center gap-3 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="text-xl font-bold text-[#1c170d] dark:text-background-light">Purity</h3>
+<p class="text-sm text-[#1c170d] dark:text-background-light/80">Using only the finest, ethically sourced, organic ingredients.</p>
+</div>
+<div class="flex flex-col items-center gap-3 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h3 class="text-xl font-bold text-[#1c170d] dark:text-background-light">Sustainability</h3>
+<p class="text-sm text-[#1c170d] dark:text-background-light/80">Committing to eco-friendly practices from farm to bottle.</p>
+</div>
+<div class="flex flex-col items-center gap-3 text-center">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+</div>
+<h3 class="text-xl font-bold text-[#1c170d] dark:text-background-light">Well-being</h3>
+<p class="text-sm text-[#1c170d] dark:text-background-light/80">Supporting your journey to a balanced body, mind, and spirit.</p>
+</div>
+</div>
+</section>
+<section class="px-4 @container">
+<div class="flex flex-col items-center gap-12 md:flex-row-reverse md:gap-16">
+<div class="flex flex-1 flex-col gap-4">
+<h2 class="text-3xl font-bold text-[#1c170d] dark:text-background-light">Heritage and Philosophy</h2>
+<p class="text-[#1c170d] dark:text-background-light/80">Ayurveda, the "science of life," is a 5,000-year-old system of natural healing with origins in the Vedic culture of India. It teaches that wellness is a delicate balance between the mind, body, and spirit. Our formulations are deeply rooted in the classical texts of Ayurveda, like the Charaka Samhita and Sushruta Samhita. We work with esteemed Ayurvedic practitioners (Vaidyas) to ensure every product is crafted with respect for this ancient wisdom, using traditional methods to unlock the potent, healing properties of nature's finest ingredients.</p>
+</div>
+<div class="relative w-full flex-1 self-stretch">
+<img alt="An artistic visual of Ayurvedic herbs and spices arranged in a mandala pattern." class="h-full min-h-[320px] w-full rounded-lg object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdRRc3vPjxCFFxU3tDveSyhOmthkW49d-Xlzj-gNWbt7MZx2Cc3qZ-5Z7eisye2-D-UJPgH2-oC0g-USG-qdf9V0A9vNqgPo5JRmlZlOgaS1Ld39akGcAxVoVIw9-YmYrLlAlUZqDKUToW687xka6Ogb6tah8WAwFHbVUeexzPagvugoisFKqgowhWHVZr2vwaRbk44IMaJr9WhKwX8o5K6S5nfYxaB9WQNN5SV02QwvN8YY8H3BMta0I6t7Z4JeCujjXNWTUdYyI"/>
+</div>
+</div>
+</section>
+<section class="px-4 @container">
+<div class="rounded-lg bg-[#f4efe7] p-8 dark:bg-background-dark/50 sm:p-12">
+<div class="flex flex-col items-center gap-12 md:flex-row md:gap-16">
+<div class="flex flex-1 flex-col gap-4">
+<h2 class="text-3xl font-bold text-[#1c170d] dark:text-background-light">Our Commitment to Quality</h2>
+<p class="text-[#1c170d] dark:text-background-light/80">Your well-being is our highest priority. We meticulously source our ingredients from certified organic farms and ethical suppliers. Our products are crafted in state-of-the-art, GMP-certified facilities, undergoing rigorous quality checks at every stage. We are proud to be cruelty-free and transparent about our processes, ensuring that what you put on your body is as pure and wholesome as what you put in it.</p>
+<div class="mt-4 flex flex-wrap items-center gap-6">
+<div class="flex items-center gap-2 text-[#1c170d] dark:text-background-light">
+<svg class="h-10 w-10" fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM17.2167 26.6666L9.55004 19L11.95 16.6L17.2167 21.85L28.05 11L30.45 13.4L17.2167 26.6666Z" fill="#1c170d"></path></svg>
+<span class="font-semibold">ISO Certified</span>
+</div>
+<div class="flex items-center gap-2 text-[#1c170d] dark:text-background-light">
+<svg class="h-10 w-10" fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM17.2167 26.6666L9.55004 19L11.95 16.6L17.2167 21.85L28.05 11L30.45 13.4L17.2167 26.6666Z" fill="#1c170d"></path></svg>
+<span class="font-semibold">GMP Certified</span>
+</div>
+<div class="flex items-center gap-2 text-[#1c170d] dark:text-background-light">
+<svg class="h-10 w-10" fill="none" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM17.2167 26.6666L9.55004 19L11.95 16.6L17.2167 21.85L28.05 11L30.45 13.4L17.2167 26.6666Z" fill="#1c170d"></path></svg>
+<span class="font-semibold">Certified Organic</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-10 px-4 @container">
+<div class="mx-auto flex max-w-2xl flex-col items-center gap-2 text-center">
+<h2 class="text-3xl font-bold text-[#1c170d] dark:text-background-light">Meet Our Founders</h2>
+<p class="text-[#1c170d] dark:text-background-light/80">Our brand is a reflection of our founders' shared passion for natural healing and a deep respect for the wisdom of Ayurveda.</p>
+</div>
+<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+<div class="flex flex-col items-center gap-4 text-center">
+<img alt="Portrait of founder one, a smiling man with a beard." class="h-32 w-32 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx0gCvVtMle527YSfhRmC9i4o2rIEaX74A-vWaZ1RcOEZs17ytzr0pJgSCbqtcmfhbNec6btPXeSm9iHuAUimsxsRgzZuyYzOUuS3ZLzd5OKZV9b6x7LOXa-SGvvmEddtq8tcEhE8nOCgtkYLv_kQATtwf_jc3phCGQnpWe1bxAgytsfPrsdfQft5XbdCusFjztPrmClR7vzvkOgUn_ZFRBgkz9QohiaGYm1y2Ehj8ceE2okuRITiiFAgcoTRvjUQbWcqLgeeqA0M"/>
+<div class="flex flex-col gap-1">
+<h3 class="text-xl font-bold text-[#1c170d] dark:text-background-light">Rohan Mehta</h3>
+<p class="text-sm font-medium text-primary">Co-Founder &amp; Ayurvedic Expert</p>
+</div>
+<p class="text-sm leading-relaxed text-[#1c170d] dark:text-background-light/80">With a lineage of Ayurvedic practitioners, Rohan brings generations of herbal knowledge and a commitment to authentic formulations.</p>
+</div>
+<div class="flex flex-col items-center gap-4 text-center">
+<img alt="Portrait of founder two, a smiling woman with glasses." class="h-32 w-32 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuxLrRaaHI0pQ1bXSo2yQhl_8aVeiemkYVYkN0iCYVoasP3Bx13ter7ptZKbSQm10AXmHAhWQIg-qnvppI3XvTGivE4vBMCAq3koOTWy0nynwE9yCfGDpXdTLde5oQxySvuUw52dqRR5zPFaGqS1GBhBcyq_VoHad93K44wegXpSDUIThVhX1f0mRdTUcpyD3bL_0GvGoL6VkWtFwVGy8K6DlNfWlxw-6IFhZCi3XD9NKlBXEhIaHo-Kyrf5GmKUXg-BY-XdLfOA4"/>
+<div class="flex flex-col gap-1">
+<h3 class="text-xl font-bold text-[#1c170d] dark:text-background-light">Priya Sharma</h3>
+<p class="text-sm font-medium text-primary">Co-Founder &amp; Wellness Advocate</p>
+</div>
+<p class="text-sm leading-relaxed text-[#1c170d] dark:text-background-light/80">A certified yoga and meditation guide, Priya's passion is to make the holistic lifestyle of Ayurveda accessible and joyful for everyone.</p>
+</div>
+</div>
+</section>
+<section class="px-4 py-16">
+<div class="flex flex-col items-center gap-8 rounded-lg bg-cover bg-center bg-no-repeat p-8 text-center sm:p-12" style='background-image: linear-gradient(rgba(244, 239, 231, 0.9), rgba(244, 239, 231, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdRRc3vPjxCFFxU3tDveSyhOmthkW49d-Xlzj-gNWbt7MZx2Cc3qZ-5Z7eisye2-D-UJPgH2-oC0g-USG-qdf9V0A9vNqgPo5JRmlZlOgaS1Ld39akGcAxVoVIw9-YmYrLlAlUZqDKUToW687xka6Ogb6tah8WAwFHbVUeexzPagvugoisFKqgowhWHVZr2vwaRbk44IMaJr9WhKwX8o5K6S5nfYxaB9WQNN5SV02QwvN8YY8H3BMta0I6t7Z4JeCujjXNWTUdYyI");'>
+<div class="flex max-w-xl flex-col gap-2">
+<h2 class="text-3xl font-bold text-[#1c170d]">Embark on Your Wellness Journey</h2>
+<p class="text-base text-[#1c170d]">Explore our curated collections and discover the perfect rituals to bring balance and harmony to your life.</p>
+</div>
+<button class="flex h-12 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-5 text-base font-bold leading-normal tracking-[0.015em] text-[#1c170d]">
+<span class="truncate">Explore Our Collections</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<footer class="px-4 py-10 border-t border-solid border-[#f4efe7] dark:border-b-background-dark/20">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-[#1c170d] dark:text-background-light">Shop</h3>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Skincare</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Haircare</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Supplements</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Teas</a>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-[#1c170d] dark:text-background-light">About</h3>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Our Story</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Blog</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Contact Us</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">FAQ</a>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-[#1c170d] dark:text-background-light">Customer Service</h3>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">My Account</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Shipping &amp; Returns</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Privacy Policy</a>
+<a class="text-sm text-[#1c170d] dark:text-background-light/80" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-bold text-[#1c170d] dark:text-background-light">Follow Us</h3>
+<div class="flex gap-4">
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-solid border-[#f4efe7] dark:border-b-background-dark/20 text-center">
+<p class="text-xs text-[#1c170d] dark:text-background-light/60">© 2024 Ayurveda Wellness. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

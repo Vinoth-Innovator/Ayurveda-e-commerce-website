@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Management Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#54cf17",
+              "background-light": "#f6f8f6",
+              "background-dark": "#162111",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-row">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-black/20 p-4">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="AyurWell Store Logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxYuddEpHph3Qdyq_azwOGgjVoNQfKWWyC8pLgMaiNOcHRJ0zSbUZ8AqLRYpxn7vjZc6TR4c7MiMy8T59EGp3R5J0mFKsJ9qpcF8QLT9xd9Sic9K2dsEf9gPgmTPzd6gW_Wh33SNDVbhxF6yyFVYiV7q20e9wi42n4J9ZEW-JxksRzECi7EY3fYocfeFuyUWTfpdiJpZtjBD0TFrC1VsBd49O3w3UYD_Wwg2G7VBTZ4F4zMfJOf8ZequrOguDYNNb9O4IzNlB7WpY");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#121b0e] dark:text-gray-100 text-base font-medium leading-normal">AyurWell Store</h1>
+<p class="text-[#67974e] dark:text-primary/70 text-sm font-normal leading-normal">Admin Panel</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#121b0e] dark:text-gray-300 hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-[#121b0e] dark:text-white dark:bg-primary/30" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<p class="text-sm font-medium leading-normal">Products</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#121b0e] dark:text-gray-300 hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<p class="text-sm font-medium leading-normal">Orders</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#121b0e] dark:text-gray-300 hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Customers</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#121b0e] dark:text-gray-300 hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<p class="text-sm font-medium leading-normal">Analytics</p>
+</a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="flex flex-1 flex-col p-6 lg:p-8">
+<div class="w-full max-w-7xl mx-auto">
+<!-- Page Heading -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+<p class="text-[#121b0e] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Product Management</p>
+<!-- ToolBar -->
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-primary text-black gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+<span class="truncate">Add New Product</span>
+</button>
+</div>
+<!-- Search & Filter Section -->
+<div class="flex flex-col md:flex-row gap-4 mb-6">
+<!-- SearchBar -->
+<div class="flex-grow">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#67974e] dark:text-primary/80 flex border-none bg-white dark:bg-black/20 items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[#121b0e] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-white dark:bg-black/20 h-full placeholder:text-gray-500 dark:placeholder:text-gray-400 px-4 text-base font-normal leading-normal" placeholder="Search by product name..." value=""/>
+</div>
+</label>
+</div>
+<!-- Chips -->
+<div class="flex items-center gap-3 overflow-x-auto">
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-black/20 px-4 text-[#121b0e] dark:text-white">
+<span class="material-symbols-outlined">category</span>
+<p class="text-sm font-medium leading-normal">Filter by Category</p>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<button class="flex h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-black/20 px-4 text-[#121b0e] dark:text-white">
+<span class="material-symbols-outlined">toggle_on</span>
+<p class="text-sm font-medium leading-normal">Filter by Status</p>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Product Table -->
+<div class="bg-white dark:bg-black/20 rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+<thead class="text-xs text-gray-700 dark:text-gray-300 uppercase bg-gray-50 dark:bg-gray-700/50">
+<tr>
+<th class="px-6 py-3" scope="col">Thumbnail</th>
+<th class="px-6 py-3" scope="col">Product Name</th>
+<th class="px-6 py-3" scope="col">Category</th>
+<th class="px-6 py-3" scope="col">Price</th>
+<th class="px-6 py-3" scope="col">Stock</th>
+<th class="px-6 py-3" scope="col">Status</th>
+<th class="px-6 py-3" scope="col">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="bg-white dark:bg-transparent border-b dark:border-gray-800">
+<td class="p-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" data-alt="Ashwagandha Capsules" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9QeR00yjTa45uRtcEUk4cwuLgq94Yz0ONh6t8nJIhD1nRSaF9Tr80PQDcqQb35pY-48Cex07NYa0m4fVEpAxBWsGFfjExUXvKTFfbtQbDAfCchBBgeO-1aQVgWPc8j9IpDblVfrgoumjRjAwd5gwA8yTt62RlQOiy6BCPibiJjORong-x4erOiAbOqyFyz9nYvErE0tf2vZQSoWN8HOWg0HRMUuJu1oytU4nGpN9-9hCjXdzJjq6PxfYsWYnk9ynQmUQJStvTwyA')"></div>
+</td>
+<th class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap" scope="row">Ashwagandha Capsules</th>
+<td class="px-6 py-4">Supplements</td>
+<td class="px-6 py-4">$19.99</td>
+<td class="px-6 py-4">120</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">Active</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="bg-white dark:bg-transparent border-b dark:border-gray-800">
+<td class="p-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" data-alt="Brahmi Oil" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC-9By29RBWSnAPlKFpeiHkoeNcaKJOfX-jB_GgWtvfsPnUuO0SygpFsUGVlblu-kgIEggtj62eAhODrRJU1m99giyMKyP6O2WdAD6O2XX9m5yKFEyxt0qyHDBlJN4U1bhVzXiS52fFsk-9XMU1IVc1ehJUlA_pwVn27JOT_OaRBfIzzb0mD8loFKJr0CtuZnHwuXc2Q8XJGNs0QN0YmAZ6HhKy54S3ED_F-4cKKEwO0eomaCxxQSj6fJFGR4kVP2ukpMX-yVYafGI')"></div>
+</td>
+<th class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap" scope="row">Brahmi Oil</th>
+<td class="px-6 py-4">Oils</td>
+<td class="px-6 py-4">$12.50</td>
+<td class="px-6 py-4">85</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300">Active</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+<tr class="bg-white dark:bg-transparent">
+<td class="p-4">
+<div class="w-16 h-16 rounded-lg bg-cover bg-center" data-alt="Triphala Powder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDQJbh7grRglQ5IfRxnu6PpIns9T-uNMs_ws7ORDiuhOWi0d9AE7bmNPiqcY6xLOjn_zhxVFBouvGELYMo325LR2gbJbxOqv0n2oKW6fSZ0mem-7vR8xHiGgLMuL3e9_d-uOi0M8eft-D-yE9dgAEVocaanHqo3aBh2liatRzQ4r-PdsnsoS8sn5k-0aj7Y3prhJm65CtUKK57kzIDzNNMaNnb5vXas_YgaX_cEGA_CuHT-31zSpt6zywwK0X_sjHzjHLYcyDAM8ck')"></div>
+</td>
+<th class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap" scope="row">Triphala Powder</th>
+<td class="px-6 py-4">Herbs</td>
+<td class="px-6 py-4">$25.00</td>
+<td class="px-6 py-4">0</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300">Inactive</span>
+</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="text-gray-500 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400"><span class="material-symbols-outlined">edit</span></button>
+<button class="text-gray-500 hover:text-red-600 dark:text-gray-400 dark:hover:text-red-400"><span class="material-symbols-outlined">delete</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

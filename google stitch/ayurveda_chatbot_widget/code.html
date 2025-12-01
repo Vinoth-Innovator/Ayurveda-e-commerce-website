@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ayurveda Chatbot Widget</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#54cf17",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#162111",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body class="font-display bg-gray-100">
+<!-- This is a mock background for demonstration purposes -->
+<div class="w-full h-screen bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3cunyNVlbFO0ybJne2-cgLLAGZM_BGgGYZgvFXyWztwuQldA7dssIMPn5sDwnjRZtmrmYqPakkiXpK8hw820L1KuazEM-L7TpYlxmhuaahIercyNek1U9kpd-BczOi7BzL7hJx4P6097cfDGZzakIHWeqekHt0y1e-oksawnO7EwoqVQ_FVRfqxBzZ-ZUtMhgt5rnljapuJTp2H0Y5i23FKgcdXm6IFu-IN--W2TwE6MLbb5TxrilMXsxKTnny4gElBluAlMfOgA');">
+<div class="p-12">
+<h1 class="text-4xl font-bold text-gray-800">Your Ayurveda E-commerce Site</h1>
+<p class="text-gray-600 mt-2">Browse our collection of organic wellness products.</p>
+</div>
+</div>
+<!-- End of mock background -->
+<!-- Chat Widget Container -->
+<div class="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
+<!-- Chat Panel -->
+<div class="w-[380px] h-[520px] bg-background-light dark:bg-background-dark shadow-2xl rounded-xl flex flex-col overflow-hidden transition-all duration-300 ease-in-out">
+<!-- Header -->
+<div class="flex flex-col gap-1 p-4 border-b border-primary/20 dark:border-primary/10">
+<div class="flex items-center justify-between">
+<p class="text-[#121b0e] dark:text-white tracking-light text-xl font-bold leading-tight">Ayurveda Assistant</p>
+<button class="text-[#67974e] dark:text-gray-300">
+<span class="material-symbols-outlined" style="font-size: 20px;">close</span>
+</button>
+</div>
+<p class="text-[#67974e] dark:text-gray-400 text-sm font-normal leading-normal">Ask me about products, orders, or Ayurveda tips</p>
+</div>
+<!-- Conversation Area -->
+<div class="flex-1 p-4 space-y-4 overflow-y-auto">
+<!-- Bot Message -->
+<div class="flex items-end gap-2.5">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8 shrink-0" data-alt="Ayurveda Assistant Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIB-XSnAh-Ffcys4vkdgefNubeQ0FnOVQEIHckmZyYJkYc71v7Zlh0vx7NrKzKhH8IRcP6ZdVr5oacby_CUJZ48J3wvgDM8J7Qld7g80l8y2LS56qf_nJmWxQwpYJhYKNKSjHyRB5TSsv2xcv0WVEf7Np1R1RWrJmZAXkBAAnU7R1yR8DxpbAKVI8t8t8qpxsQZVnSlp-LYKt9xFUVv7pTktnQEXplOmtWIeKIgamYMRHqcKnZH7iOJpbCiZx_Hqx420iXD5hRZ40");'></div>
+<div class="flex flex-1 flex-col gap-1 items-start">
+<p class="text-base font-normal leading-normal flex max-w-[280px] rounded-lg rounded-bl-none px-4 py-2.5 bg-primary/20 dark:bg-primary/30 text-[#121b0e] dark:text-white">Namaste 🌿 I’m your Ayurveda Assistant. How can I help you today?</p>
+</div>
+</div>
+<!-- User Message Example -->
+<div class="flex items-end gap-2.5 justify-end">
+<div class="flex flex-1 flex-col gap-1 items-end">
+<p class="text-base font-normal leading-normal flex max-w-[280px] rounded-lg rounded-br-none px-4 py-2.5 bg-primary text-white">I need to find a product for stress relief.</p>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 h-8 shrink-0" data-alt="User Avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlg1euK88SpgL1T9Xv8Teh3UlifrarK1C93rVNLAnGr3kM9J8mryaCkkgIw6ozzp3Qr30B5jk-BHPbkOVAzSAo00eGKrKq199boaL-YpaVaAbWNBBsk37Vuw92tp8gRRKfVJy7n6b92J66Br7_YcsJV1L0XubFcMr9XCzqmWu84hxLISCSwju1qscmBpv-YQpwPY0aMpLf_InEOdKmnL2NqQYSwjPS-9e52VUP36kGfIISN3cjzbP-UyFcZk02rkB4dpNyTGE1J-s");'></div>
+</div>
+<!-- Chips/Quick Replies -->
+<div class="flex flex-col items-start gap-2 pt-2">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark border border-primary/30 dark:border-primary/20 px-3 cursor-pointer">
+<p class="text-[#121b0e] dark:text-white text-sm font-medium leading-normal">Find a product for...</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark border border-primary/30 dark:border-primary/20 px-3 cursor-pointer">
+<p class="text-[#121b0e] dark:text-white text-sm font-medium leading-normal">Track my order</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark border border-primary/30 dark:border-primary/20 px-3 cursor-pointer">
+<p class="text-[#121b0e] dark:text-white text-sm font-medium leading-normal">Learn about Ayurveda</p>
+</div>
+</div>
+</div>
+<!-- Composer/Input Area -->
+<div class="flex items-center p-3 gap-3 border-t border-primary/20 dark:border-primary/10">
+<label class="flex flex-col min-w-40 h-11 flex-1">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#121b0e] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-primary/20 dark:bg-primary/30 h-full placeholder:text-[#67974e] dark:placeholder:text-gray-400 px-4 text-sm font-normal leading-normal" placeholder="Type your question..." value=""/>
+<button class="flex items-center justify-center px-3 bg-primary rounded-lg ml-2">
+<span class="material-symbols-outlined text-[#121b0e]" style="font-size: 20px;">send</span>
+</button>
+</div>
+</label>
+</div>
+</div>
+<!-- FAB (Floating Action Button) -->
+<button class="flex w-16 h-16 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-primary text-[#121b0e] shadow-lg">
+<span class="material-symbols-outlined" style="font-size: 32px;">chat_bubble</span>
+</button>
+</div>
+</body></html>

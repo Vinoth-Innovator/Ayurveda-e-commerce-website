@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ayurveda Admin Reports Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL'0, 'wght'400, 'GRAD'0, 'opsz'24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#25ec13",
+            "background-light": "#f6f8f6",
+            "background-dark": "#122210",
+            "primary-darker": "#0f1b0d",
+            "primary-subtle": "#e8f3e7",
+            "primary-border": "#d1e7cf",
+            "success": "#078823",
+            "error": "#e72208",
+            "primary-green-text": "#529a4c"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col border-r border-primary-border dark:border-primary-darker/20 bg-[#f8fcf8] dark:bg-background-dark p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Ayurveda Store logo with a green leaf motif" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRRjPDHGHFqAQV3rkdLiAMrboo65F2XI0BRkPEH7vp0mzsy7mileG5WhfpawwOl5thqhjaaPQklQiI8aeeFEcJSr4mpijxwnIlgZtvkI_lalbckgGSQu9K44LLJLd6renjE70SNwXUl8OOPjuj1xOfwb7B6OYWotOjaj0JRZ40b5nmmy6GDQ2nYsF3mLfuJIRvr0OIvpBGhwwhzYIwiAe-QqC35oEcF-YS3_dUct-MpfikS81Aftki_aMaHLwmmbL-ZUFKc51ZaF4");'></div>
+<div class="flex flex-col">
+<h1 class="text-primary-darker dark:text-background-light text-base font-medium leading-normal">Ayurveda Store</h1>
+<p class="text-primary-green-text dark:text-primary-green-text/80 text-sm font-normal leading-normal">Admin Panel</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 text-primary-darker dark:text-primary-subtle rounded-lg hover:bg-primary-subtle dark:hover:bg-primary-darker/40" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-primary-darker dark:text-primary-subtle rounded-lg hover:bg-primary-subtle dark:hover:bg-primary-darker/40" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<p class="text-sm font-medium leading-normal">Orders</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-primary-darker dark:text-primary-subtle rounded-lg hover:bg-primary-subtle dark:hover:bg-primary-darker/40" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-sm font-medium leading-normal">Products</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-primary-darker dark:text-primary-subtle rounded-lg hover:bg-primary-subtle dark:hover:bg-primary-darker/40" href="#">
+<span class="material-symbols-outlined">group</span>
+<p class="text-sm font-medium leading-normal">Customers</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary-subtle dark:bg-primary-darker/40 text-primary-darker dark:text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<p class="text-sm font-medium leading-normal">Reports</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto flex flex-col gap-4">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-primary-darker text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">View Store</span>
+</button>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 text-primary-darker dark:text-primary-subtle rounded-lg hover:bg-primary-subtle dark:hover:bg-primary-darker/40" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-primary-darker dark:text-primary-subtle rounded-lg hover:bg-primary-subtle dark:hover:bg-primary-darker/40" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<p class="text-sm font-medium leading-normal">Support</p>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8">
+<div class="w-full max-w-7xl mx-auto flex flex-col gap-6">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between items-center gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-primary-darker dark:text-background-light text-4xl font-black leading-tight tracking-[-0.033em]">Reports &amp; Analytics</p>
+<p class="text-primary-green-text dark:text-primary-green-text/80 text-base font-normal leading-normal">Monitor your store's performance and growth.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary-subtle dark:bg-primary-darker/40 text-primary-darker dark:text-primary-subtle text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined">download</span>
+<span class="truncate">Export Report</span>
+</button>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap items-center gap-4">
+<!-- Chips -->
+<div class="flex gap-3 overflow-x-auto">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary-subtle dark:bg-primary-darker/40 pl-4 pr-2 text-primary-darker dark:text-primary-subtle">
+<p class="text-sm font-medium leading-normal">Date: Last 30 days</p>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary-subtle dark:bg-primary-darker/40 pl-4 pr-2 text-primary-darker dark:text-primary-subtle">
+<p class="text-sm font-medium leading-normal">Report: Sales Overview</p>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- ButtonGroup -->
+<div class="flex flex-1 gap-3 flex-wrap justify-start sm:justify-end">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-primary-darker text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Apply Filters</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary-subtle dark:bg-primary-darker/40 text-primary-darker dark:text-primary-subtle text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Reset</span>
+</button>
+</div>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary-border dark:border-primary-darker/20 bg-white dark:bg-primary-darker/20">
+<p class="text-primary-darker dark:text-background-light text-base font-medium leading-normal">Total Revenue</p>
+<p class="text-primary-darker dark:text-background-light tracking-tight text-3xl font-bold leading-tight">$10,540</p>
+<p class="text-success dark:text-success text-base font-medium leading-normal">+12.5%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary-border dark:border-primary-darker/20 bg-white dark:bg-primary-darker/20">
+<p class="text-primary-darker dark:text-background-light text-base font-medium leading-normal">Number of Orders</p>
+<p class="text-primary-darker dark:text-background-light tracking-tight text-3xl font-bold leading-tight">215</p>
+<p class="text-success dark:text-success text-base font-medium leading-normal">+8.2%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary-border dark:border-primary-darker/20 bg-white dark:bg-primary-darker/20">
+<p class="text-primary-darker dark:text-background-light text-base font-medium leading-normal">Average Order Value</p>
+<p class="text-primary-darker dark:text-background-light tracking-tight text-3xl font-bold leading-tight">$49.02</p>
+<p class="text-error dark:text-error text-base font-medium leading-normal">-1.5%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-primary-border dark:border-primary-darker/20 bg-white dark:bg-primary-darker/20">
+<p class="text-primary-darker dark:text-background-light text-base font-medium leading-normal">Returning Customers</p>
+<p class="text-primary-darker dark:text-background-light tracking-tight text-3xl font-bold leading-tight">28%</p>
+<p class="text-success dark:text-success text-base font-medium leading-normal">+5.0%</p>
+</div>
+</div>
+<!-- Chart and Top Products -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 flex flex-col gap-4 p-6 rounded-xl border border-primary-border dark:border-primary-darker/20 bg-white dark:bg-primary-darker/20">
+<h3 class="text-lg font-bold text-primary-darker dark:text-background-light">Sales Overview</h3>
+<div class="w-full h-80 bg-primary-subtle/50 dark:bg-primary-darker/40 rounded-lg flex items-center justify-center">
+<p class="text-primary-green-text dark:text-primary-green-text/80">Chart Data Placeholder</p>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-6 rounded-xl border border-primary-border dark:border-primary-darker/20 bg-white dark:bg-primary-darker/20">
+<h3 class="text-lg font-bold text-primary-darker dark:text-background-light">Top Products</h3>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4">
+<img class="size-12 rounded-lg object-cover" data-alt="Product thumbnail 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-91aqToniQUqHMJENApL5Cm5nXC4hR4LZbsRNGZvOLc5oh868oXvp8zNzGBNCRUri7spb1R7_9yzErvxnWPI2c_JBM5KFN9pSuaLdNWKymogaNyR_XwW1Y3FA2ao1to6ricUXQC3wFcG-hcRxlE5CeMB_x1OL2EqJOsQc0hcCpul9yjzph5D9od80MOwUBS1YiLyhi7Q8rqPEDDKWd8N2f_XRR0X3keH4YyorG1k6eqFpuweezEiftmV4XQEMMl8myua8SBhXCRs"/>
+<div class="flex-1">
+<p class="font-semibold text-primary-darker dark:text-background-light">Ashwagandha Capsules</p>
+<p class="text-sm text-primary-green-text dark:text-primary-green-text/80">120 units sold</p>
+</div>
+<p class="font-bold text-primary-darker dark:text-background-light">$1,800</p>
+</div>
+<div class="flex items-center gap-4">
+<img class="size-12 rounded-lg object-cover" data-alt="Product thumbnail 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsIHlhAt57ZtF5e_YJ6fuAfNs1pCEN_B_EcKBlUjzHJFgD9Y2HaJXvYeqQF6SVcONmjj26wOG8AFpXdfo7WVAzZ1o5rJjJ3q1lJD0ZYjnYpQcdC7gpDywtWVyh0dPG8HM63-MEEDohGihjwY2zCK1sO35KRyLT2WzXLCJ4Z2YpyRmm5qtMYVZ7WFM6PJY3khDIG5j19IdXjciCCuCYbqC0McIcfG1JEB10CiFJC43MOwMXUpEJU7O5QPChovooffI1YqfUkBmfDIA"/>
+<div class="flex-1">
+<p class="font-semibold text-primary-darker dark:text-background-light">Triphala Powder</p>
+<p class="text-sm text-primary-green-text dark:text-primary-green-text/80">95 units sold</p>
+</div>
+<p class="font-bold text-primary-darker dark:text-background-light">$1,140</p>
+</div>
+<div class="flex items-center gap-4">
+<img class="size-12 rounded-lg object-cover" data-alt="Product thumbnail 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANP2j9Nbn8xFHU95OHvn7Ngr8sdc6X4JEj2a3F5aYGhbQv6FWTw54nhw0r0v0HF2R7FPJrqbSf3Akx217ceTRL9rnY5cH8HCeae2ysRX2m-qO6wK5QXC4jK1bs5hvBzPc3yrGj5kqL_PpvW_fRP3_D4NrKGMSn6-pt6_tAewY9xUXZZPgUWXgSa6Olb8vnr-L__oMZ_6WTSHOpYIuLzk4X4BBRiao3_kNBkGzdZm2OFnKJQ6w33hw5AbVEUy4joLMQx8zzPFoSq1A"/>
+<div class="flex-1">
+<p class="font-semibold text-primary-darker dark:text-background-light">Brahmi Oil</p>
+<p class="text-sm text-primary-green-text dark:text-primary-green-text/80">82 units sold</p>
+</div>
+<p class="font-bold text-primary-darker dark:text-background-light">$984</p>
+</div>
+<div class="flex items-center gap-4">
+<img class="size-12 rounded-lg object-cover" data-alt="Product thumbnail 4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnMMYRBeN1WYa_OlNnCTWFN_-OqvbFUQk03P1tfr-y1y5Cop-AmT_QW_09JVIaa2BKX6nXKhha_j2S3Mo5q2RARNavw4fCSm2YAC0HCi1ajgTrOpQqTNuB_cUpHSJSbduCrEnxd_LNSPxcDwQmYH_NVIrh2pUGhuTFvAefYH6qvGQKfuIQ1Yuq5LtBmXS5k0CmimxEE7grdb-6GpuMQbE_1n_Qbs1V5bjkrBA7yzgo752gpVh5XFCG2blrCi1LzSovD-tGIJfOqPQ"/>
+<div class="flex-1">
+<p class="font-semibold text-primary-darker dark:text-background-light">Turmeric Forte</p>
+<p class="text-sm text-primary-green-text dark:text-primary-green-text/80">75 units sold</p>
+</div>
+<p class="font-bold text-primary-darker dark:text-background-light">$1,125</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Low Stock Table -->
+<div class="w-full overflow-hidden rounded-xl border border-primary-border dark:border-primary-darker/20 bg-white dark:bg-primary-darker/20">
+<div class="p-6">
+<h3 class="text-lg font-bold text-primary-darker dark:text-background-light">Low Stock / Inventory Alerts</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-primary-subtle dark:bg-primary-darker/40">
+<tr>
+<th class="p-4 text-sm font-semibold text-primary-darker dark:text-primary-subtle">Product Name</th>
+<th class="p-4 text-sm font-semibold text-primary-darker dark:text-primary-subtle text-right">Units in Stock</th>
+<th class="p-4 text-sm font-semibold text-primary-darker dark:text-primary-subtle text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary-border dark:divide-primary-darker/20">
+<tr>
+<td class="p-4 text-primary-darker dark:text-primary-subtle">Neem &amp; Aloe Vera Soap</td>
+<td class="p-4 text-primary-darker dark:text-primary-subtle text-right">4</td>
+<td class="p-4 text-right">
+<span class="inline-flex items-center gap-2 rounded-full bg-error/10 dark:bg-error/20 px-3 py-1 text-sm font-medium text-error dark:text-error">
+<span class="material-symbols-outlined" style="font-size: 16px;">warning</span> Low Stock
+                      </span>
+</td>
+</tr>
+<tr>
+<td class="p-4 text-primary-darker dark:text-primary-subtle">Herbal Hair Oil</td>
+<td class="p-4 text-primary-darker dark:text-primary-subtle text-right">2</td>
+<td class="p-4 text-right">
+<span class="inline-flex items-center gap-2 rounded-full bg-error/10 dark:bg-error/20 px-3 py-1 text-sm font-medium text-error dark:text-error">
+<span class="material-symbols-outlined" style="font-size: 16px;">warning</span> Low Stock
+                      </span>
+</td>
+</tr>
+<tr>
+<td class="p-4 text-primary-darker dark:text-primary-subtle">Chyawanprash</td>
+<td class="p-4 text-primary-darker dark:text-primary-subtle text-right">8</td>
+<td class="p-4 text-right">
+<span class="inline-flex items-center gap-2 rounded-full bg-orange-400/10 dark:bg-orange-400/20 px-3 py-1 text-sm font-medium text-orange-500 dark:text-orange-400">
+<span class="material-symbols-outlined" style="font-size: 16px;">hourglass_empty</span> Needs Reorder
+                      </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ayurveda Wellness - Product Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#4A6B5D", 
+              "secondary": "#D87A4C",
+              "background-light": "#F9F7F3",
+              "background-dark": "#1a1a1a",
+              "text-light": "#1c170d",
+              "text-dark": "#e0e0e0",
+              "subtle-light": "#e8e0ce",
+              "subtle-dark": "#333333",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-subtle-light dark:border-subtle-dark px-4 sm:px-8 md:px-16 lg:px-24 py-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-text-light dark:text-text-dark">
+<span class="material-symbols-outlined text-primary text-3xl">spa</span>
+<h1 class="text-xl font-bold leading-tight tracking-tight">Ayurveda</h1>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Shop</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Our Story</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Wellness Hub</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<label class="hidden lg:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-text-light/70 dark:text-text-dark/70 flex bg-subtle-light/50 dark:bg-subtle-dark/50 items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-subtle-light/50 dark:bg-subtle-dark/50 h-full placeholder:text-text-light/50 dark:placeholder:text-text-dark/50 px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search products..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-transparent hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary text-white relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-secondary text-xs font-bold text-white">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="px-4 sm:px-8 md:px-16 lg:px-24 py-8">
+<div class="flex flex-col lg:flex-row gap-12">
+<aside class="w-full lg:w-1/4 xl:w-1/5 shrink-0">
+<div class="flex flex-wrap gap-1.5 pb-6 border-b border-subtle-light dark:border-subtle-dark">
+<a class="text-sm font-medium leading-normal text-text-light/60 dark:text-text-dark/60 hover:text-primary" href="#">Home</a>
+<span class="text-sm font-medium leading-normal text-text-light/60 dark:text-text-dark/60">/</span>
+<span class="text-sm font-medium leading-normal text-text-light dark:text-text-dark">Shop</span>
+</div>
+<div class="flex flex-col pt-6">
+<details class="flex flex-col border-b border-subtle-light dark:border-subtle-dark py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-base font-bold leading-normal">Product Categories</p>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="flex flex-col gap-3 pt-3 pb-4">
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/><span class="text-sm">Supplements</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/><span class="text-sm">Oils</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/><span class="text-sm">Personal Care</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/><span class="text-sm">Immunity</span></label>
+</div>
+</details>
+<details class="flex flex-col border-b border-subtle-light dark:border-subtle-dark py-2 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-base font-bold leading-normal">Health Goals</p>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="flex flex-col gap-3 pt-3 pb-4">
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/><span class="text-sm">Digestion</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/><span class="text-sm">Stress Relief</span></label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/><span class="text-sm">Immunity Boost</span></label>
+</div>
+</details>
+<details class="flex flex-col border-b border-subtle-light dark:border-subtle-dark py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-base font-bold leading-normal">Price Range</p>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2">
+<input class="w-full h-2 bg-subtle-light dark:bg-subtle-dark rounded-lg appearance-none cursor-pointer accent-primary" max="100" min="0" type="range" value="50"/>
+<div class="flex justify-between text-sm mt-2 text-text-light/80 dark:text-text-dark/80">
+<span>$0</span>
+<span>$100+</span>
+</div>
+</div>
+</details>
+<details class="flex flex-col border-b border-subtle-light dark:border-subtle-dark py-2 group">
+<summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
+<p class="text-base font-bold leading-normal">Rating</p>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180">expand_more</span>
+</summary>
+<div class="flex flex-col gap-3 pt-3 pb-4">
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/>
+<div class="flex items-center">
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+</div>
+</label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/>
+<div class="flex items-center">
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-subtle-light dark:text-subtle-dark">star</span>
+</div>
+<span class="text-sm">&amp; Up</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer"><input class="form-checkbox rounded border-subtle-light dark:border-subtle-dark text-primary focus:ring-primary/50 bg-transparent dark:bg-background-dark" type="checkbox"/>
+<div class="flex items-center">
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-xl text-subtle-light dark:text-subtle-dark">star</span>
+<span class="material-symbols-outlined !text-xl text-subtle-light dark:text-subtle-dark">star</span>
+</div>
+<span class="text-sm">&amp; Up</span>
+</label>
+</div>
+</details>
+</div>
+</aside>
+<div class="w-full lg:w-3/4 xl:w-4/5">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-4xl font-black leading-tight tracking-tight">Shop All Products</h2>
+<p class="text-text-light/70 dark:text-text-dark/70 mt-1">Discover our curated collection of natural wellness products.</p>
+</div>
+<div class="relative">
+<select class="form-select appearance-none block w-full pl-4 pr-10 py-2 h-10 text-sm font-medium bg-transparent border border-subtle-light dark:border-subtle-dark rounded-lg hover:bg-subtle-light/50 dark:hover:bg-subtle-dark/50 focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors">
+<option>Sort by: Popularity</option>
+<option>Sort by: Newest</option>
+<option>Sort by: Price: Low to High</option>
+<option>Sort by: Price: High to Low</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-text-light/70 dark:text-text-dark/70">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+<div class="flex flex-col rounded-xl overflow-hidden group border border-subtle-light/0 hover:border-subtle-light dark:hover:border-subtle-dark transition-all duration-300 bg-background-light dark:bg-background-dark shadow-sm hover:shadow-xl">
+<div class="relative overflow-hidden bg-subtle-light/50 dark:bg-subtle-dark/50">
+<div class="absolute top-3 left-3 bg-secondary text-white text-xs font-bold px-2 py-1 rounded-full z-10">Bestseller</div>
+<div class="aspect-square bg-center bg-no-repeat bg-cover h-full w-full transition-transform duration-300 group-hover:scale-105" data-alt="Bottle of glowing orange serum" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjRq0eSEnqAnIlDsqNiD71mhkBY3bfrZK0KMTkWgn3qdxSJs1Qt_yK0kXBE1G_qWK_7IUfW6oc1Htse-CcqLtdgpaNJBpIACEhHDNdqF76T_Lx5Rt_lUamCAkmM8bfmy608NV_TfeL3aJOwMnxS2kA9uyXgYDt7Lq72RiLmy_iibpOjd-vLnrACFdxNrrwm2qzEAJvUT2EVsanvj1RD1lSMozJjSpsqurVwLvCI-mod1Cqh3R4JYRyjLAT4cT3FEUkUmGWVrAOHKw");'></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-2 p-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark text-sm font-bold hover:bg-primary hover:text-white transition-colors">Add to Cart</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-12 shrink-0 bg-background-light/80 dark:bg-background-dark/80 text-text-light dark:text-text-dark hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">visibility</span></button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-bold text-lg">Radiant Glow Serum</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star_half</span>
+<span class="text-xs text-text-light/60 dark:text-text-dark/60 ml-1">(124)</span>
+</div>
+<p class="font-bold text-lg mt-2">$34.99</p>
+</div>
+</div>
+<div class="flex flex-col rounded-xl overflow-hidden group border border-subtle-light/0 hover:border-subtle-light dark:hover:border-subtle-dark transition-all duration-300 bg-background-light dark:bg-background-dark shadow-sm hover:shadow-xl">
+<div class="relative overflow-hidden bg-subtle-light/50 dark:bg-subtle-dark/50">
+<div class="aspect-square bg-center bg-no-repeat bg-cover h-full w-full transition-transform duration-300 group-hover:scale-105" data-alt="Container of Ashwagandha herbal supplement powder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWa6nymOtq_5XyhzkkfqXRl438Onp_bKSeYoZtt5ozi3JC0ZWUvoejIjwVO64AwYrldaVLMAn-JAOU7haVyRxjE4cF3Gyb-UDWlEoVS9MAl6S0X-BRgVUtOJ7Dovw4l-E17VePIyizHQh0yI9Oc3K-tIcyTXl2VC7zjnjAmYr9TshAhgA-nmAL5qN5xsvEmlVLMnO3HvPvfiYzyDkF5Arff_Z00Nj11aAlfjhDUZ3Gvrn-lk1R19P6fl6cdAfT1axSM2IhlirI4uA");'></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-2 p-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark text-sm font-bold hover:bg-primary hover:text-white transition-colors">Add to Cart</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-12 shrink-0 bg-background-light/80 dark:bg-background-dark/80 text-text-light dark:text-text-dark hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">visibility</span></button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-bold text-lg">Ashwagandha Root Powder</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-subtle-light dark:text-subtle-dark">star</span>
+<span class="text-xs text-text-light/60 dark:text-text-dark/60 ml-1">(89)</span>
+</div>
+<p class="font-bold text-lg mt-2">$19.50</p>
+</div>
+</div>
+<div class="flex flex-col rounded-xl overflow-hidden group border border-subtle-light/0 hover:border-subtle-light dark:hover:border-subtle-dark transition-all duration-300 bg-background-light dark:bg-background-dark shadow-sm hover:shadow-xl">
+<div class="relative overflow-hidden bg-subtle-light/50 dark:bg-subtle-dark/50">
+<div class="aspect-square bg-center bg-no-repeat bg-cover h-full w-full transition-transform duration-300 group-hover:scale-105" data-alt="Herbal tea in a cup with loose leaf tea" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBf4NRHDyYu_QvN8z_kVIn5WCGZnLNyCNQHPp2j2ZK-YAiaXlRtRX6FIxWrER3NGe0fKy-oGqlyAweCjXUJpHXbbVTFZUL-MKP370vV9I-m4nVBmOdKXZxxhCElPAGl32eNqrOqQffWWZwmj2LNbzPwy8NRKAJaOIYyp27LBay6AWxzu4izL2g93ZICGQl_HHqwwHczhtHe8nmS8qKAM2MXXxgjF-hjNy89F3FI_PVyaYiz-PRv97pv7149k0ZCKwGHHVURbhGD4CQ");'></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-2 p-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark text-sm font-bold hover:bg-primary hover:text-white transition-colors">Add to Cart</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-12 shrink-0 bg-background-light/80 dark:bg-background-dark/80 text-text-light dark:text-text-dark hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">visibility</span></button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-bold text-lg">Calming Chamomile Tea</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star_half</span>
+<span class="text-xs text-text-light/60 dark:text-text-dark/60 ml-1">(201)</span>
+</div>
+<p class="font-bold text-lg mt-2">$12.00</p>
+</div>
+</div>
+<div class="flex flex-col rounded-xl overflow-hidden group border border-subtle-light/0 hover:border-subtle-light dark:hover:border-subtle-dark transition-all duration-300 bg-background-light dark:bg-background-dark shadow-sm hover:shadow-xl">
+<div class="relative overflow-hidden bg-subtle-light/50 dark:bg-subtle-dark/50">
+<div class="aspect-square bg-center bg-no-repeat bg-cover h-full w-full transition-transform duration-300 group-hover:scale-105" data-alt="A jar of Triphala herbal supplement capsules" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBr3LOuk54x7zxzBbt9ukFaQ1ULs6dOrNSulG6BfrQwXZb0IoZQDDYuFzviUQrFD-NPfpezNTHWbnkwRKeqOvNbjLpA-gODBzdbrYhYhypXyrlbkDEeGrgjJ8x84uViEgnLdkYl4KUSjnHKCYxkkwX8nrKRZ1Qm8BEbUz4fvhwER-Q624s96RLZkfOtUFd-Kk3iOpMWHSkJcT9pvwoqJ-5tyP1mOXBlfpbZ-e9VVp_PHVbgbtlIqEeUUk6o1EwBsCB--BZnvA2JH9c");'></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-2 p-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark text-sm font-bold hover:bg-primary hover:text-white transition-colors">Add to Cart</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-12 shrink-0 bg-background-light/80 dark:bg-background-dark/80 text-text-light dark:text-text-dark hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">visibility</span></button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-bold text-lg">Triphala Digestive Aid</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-subtle-light dark:text-subtle-dark">star</span>
+<span class="text-xs text-text-light/60 dark:text-text-dark/60 ml-1">(56)</span>
+</div>
+<p class="font-bold text-lg mt-2">$22.99</p>
+</div>
+</div>
+<div class="flex flex-col rounded-xl overflow-hidden group border border-subtle-light/0 hover:border-subtle-light dark:hover:border-subtle-dark transition-all duration-300 bg-background-light dark:bg-background-dark shadow-sm hover:shadow-xl">
+<div class="relative overflow-hidden bg-subtle-light/50 dark:bg-subtle-dark/50">
+<div class="aspect-square bg-center bg-no-repeat bg-cover h-full w-full transition-transform duration-300 group-hover:scale-105" data-alt="Bar of natural handmade soap with herbs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1xmWqX5WDcOJej499fZfCX1SldgZGj3E0NvQ7TJ_xXBXxRnxwUZdTR5rQNTgJ2D_1sxou4b-ptnvCrnN6Xqa6MYOUOXKkiWZTInmZAaaQy-ktwk1vqc-6WGBRfLw1AQgOX4FSxeOYqj8Za0wWcgWwzqT2gWhA91cew5DTp9lR9ecmbP_QuWflC7t_Zu9gfajQSTgAtCig6E4HeyXv9xDe81AShRfMQk7qYxjeMCxmFxEyMXtIZpUz_Eb2m8w-Y5SQv2QUJLGyY9A");'></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-2 p-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark text-sm font-bold hover:bg-primary hover:text-white transition-colors">Add to Cart</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-12 shrink-0 bg-background-light/80 dark:bg-background-dark/80 text-text-light dark:text-text-dark hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">visibility</span></button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-bold text-lg">Neem Purifying Soap</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star_half</span>
+<span class="text-xs text-text-light/60 dark:text-text-dark/60 ml-1">(150)</span>
+</div>
+<p class="font-bold text-lg mt-2">$8.50</p>
+</div>
+</div>
+<div class="flex flex-col rounded-xl overflow-hidden group border border-subtle-light/0 hover:border-subtle-light dark:hover:border-subtle-dark transition-all duration-300 bg-background-light dark:bg-background-dark shadow-sm hover:shadow-xl">
+<div class="relative overflow-hidden bg-subtle-light/50 dark:bg-subtle-dark/50">
+<div class="aspect-square bg-center bg-no-repeat bg-cover h-full w-full transition-transform duration-300 group-hover:scale-105" data-alt="Bottle of Amla hair oil with herbs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRhA7SqNwOl7Sk6Us2dUgHEHA5iUFfXbMSs0trQLlV1fo__QvvsJd1Ae2ahhK4mp3Dq6s9EhEq02YgbGNLapI09box21IWEpJQXJWgbel6IzWsO8LgAkJYqmSHTcn-R0oZxcdtYgw1K4ECxlm9aJEnts1KQTp60snSs4cwEMZNqG14iENmOEpbT4EKjVootH09razbhei-mTEKSz5Ok6BjqVHOKp-bIcq-_xSOTbxryFqLgi_Zh1R433FfRP9QFAvYeag3_-atc1E");'></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-2 p-4">
+<button class="flex items-center justify-center rounded-lg h-10 w-full bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark text-sm font-bold hover:bg-primary hover:text-white transition-colors">Add to Cart</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-12 shrink-0 bg-background-light/80 dark:bg-background-dark/80 text-text-light dark:text-text-dark hover:bg-primary hover:text-white transition-colors"><span class="material-symbols-outlined text-xl">visibility</span></button>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-1">
+<h3 class="font-bold text-lg">Amla Nourishing Hair Oil</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-yellow-500" style="font-variation-settings: 'FILL' 1">star</span>
+<span class="material-symbols-outlined !text-base text-subtle-light dark:text-subtle-dark">star</span>
+<span class="text-xs text-text-light/60 dark:text-text-dark/60 ml-1">(92)</span>
+</div>
+<p class="font-bold text-lg mt-2">$28.00</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-center mt-12">
+<button class="flex items-center justify-center rounded-lg h-11 w-40 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">Load More</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

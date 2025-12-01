@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ayurveda Home Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#f4af25",
+            "background-light": "#f8f7f5",
+            "background-dark": "#221c10",
+            "text-light": "#1c170d",
+            "text-dark": "#f8f7f5",
+            "subtle-light": "#f4efe7",
+            "subtle-dark": "#3a3224",
+            "subtle-text-light": "#9c8149",
+            "subtle-text-dark": "#a8997d",
+            "herbal-green": "#5a7a5a",
+            "warm-orange": "#e08b4e",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-8 md:px-16 lg:px-24 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-screen-xl flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-subtle-light dark:border-subtle-dark px-4 sm:px-6 lg:px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-text-light dark:text-text-dark">
+<div class="size-6 text-herbal-green">
+<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4v2a2 2 0 002 2h12a2 2 0 002-2V4M8 8v12M16 8v12M4 20h16M7 4a4 4 0 014-2h2a4 4 0 014 2v0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Ayurveda Wellness</h2>
+</div>
+<div class="hidden lg:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-warm-orange transition-colors" href="#">Home</a>
+<a class="text-sm font-medium leading-normal hover:text-warm-orange transition-colors" href="#">Shop</a>
+<a class="text-sm font-medium leading-normal hover:text-warm-orange transition-colors" href="#">About</a>
+<a class="text-sm font-medium leading-normal hover:text-warm-orange transition-colors" href="#">Blog</a>
+<a class="text-sm font-medium leading-normal hover:text-warm-orange transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end items-center gap-4">
+<div class="flex gap-2">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 hover:bg-subtle-light dark:hover:bg-subtle-dark text-text-light dark:text-text-dark gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0">
+<span class="material-symbols-outlined !text-xl">shopping_cart</span>
+</button>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 hover:bg-subtle-light dark:hover:bg-subtle-dark text-text-light dark:text-text-dark gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0">
+<span class="material-symbols-outlined !text-xl">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col gap-10 md:gap-16 lg:gap-20">
+<div class="@container mt-5">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-center justify-center p-4 relative" data-alt="A serene scene with Ayurvedic herbs, oils, and stones arranged artfully on a wooden surface.">
+<div class="absolute inset-0 bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlzsL8S2j7v9SNhqQwMAavswBfLSTeeMxkTkrAtKUi5v5UirmUEGduchWS5w8vzHlYxeq_okkX97TcozrIlbMcBE69m0Yk6C0FayeUsd9TkV6A3kI3JcYwcqTzS921mMApk8rs9hEOvGCj0ry_YJJ0EGm9ICQvRHWCbTJ_h0YjUiVLO2ddr67rTsmk20dqWEK1QXu2ddoR71BwQlIVL38qnHZkzy-yVfJDbOsE22ts9aQzNc5hoowmvinp5meDW4vNE24miBymQS8"); filter: brightness(0.8);'></div>
+<div class="absolute inset-0 bg-black/30 rounded-lg"></div>
+<div class="relative flex flex-col gap-4 text-center max-w-2xl z-10">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">Holistic Health from Ancient Wisdom</h1>
+<h2 class="text-white text-base font-normal leading-normal @[480px]:text-lg @[480px]:font-normal @[480px]:leading-normal">Discover authentic Ayurvedic products for a holistic and harmonious lifestyle.</h2>
+</div>
+<button class="relative z-10 flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-herbal-green text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all">
+<span class="truncate">Shop Now</span>
+</button>
+</div>
+</div>
+</div>
+<section class="py-12 px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-screen-xl mx-auto">
+<div class="flex flex-col items-center text-center">
+<div class="mb-4 text-herbal-green">
+<span class="material-symbols-outlined !text-4xl">eco</span>
+</div>
+<h3 class="text-lg font-bold mb-2">100% Natural Ingredients</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm">Sourced from nature, crafted with care for your well-being.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="mb-4 text-herbal-green">
+<span class="material-symbols-outlined !text-4xl">verified</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Certified Ayurvedic Formulas</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm">Time-tested recipes based on ancient Ayurvedic wisdom.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="mb-4 text-herbal-green">
+<span class="material-symbols-outlined !text-4xl">pets</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Cruelty-Free &amp; Organic</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm">Ethical and sustainable products you can trust.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="mb-4 text-herbal-green">
+<span class="material-symbols-outlined !text-4xl">local_shipping</span>
+</div>
+<h3 class="text-lg font-bold mb-2">Free Shipping</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm">Enjoy complimentary shipping on all orders over $50.</p>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-center">Featured Collections</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 p-4">
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300 ease-in-out" data-alt="A glass cup of herbal immunity tea with steam rising, surrounded by dried herbs and spices." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC3ElOGr3gSevOvzsgPObezxSY5vPuWM3yae7nG0ylo0wb4mdneylhjpnxsXMs3ytxxOEjXf3_oj4jz2Dw3XD8Iao5iv0zIWKPDFtKh7Kapmgm-WaK7Xur8OVb_MG3Bv8txuu2bH1-m93__0av5wBnGBGd8uyISCp6LZeZQXVNhLJ3Nx6g9rJ01YJBz9dSGchabsejz9tnLZ6BYqxeeq2-70nEQ8HsvHvtPGCdC73JTIm4Ty64hv0lvNPTQry9_iI5MkBmSlA9CZ9g");'></div>
+</div>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Herbal Immunity Tea</p>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal">$15.00</p>
+<button class="mt-2 text-sm text-herbal-green font-bold hover:underline">View Product</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300 ease-in-out" data-alt="A bottle of nourishing hair oil with a dropper, placed next to green leaves and flowers." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBdcVBkRPZJ3S_HCcoFCuVUAU5o0mHjDGv4jiAPJ2PPTyuMXG3bbUEsyMTmOonvAMTWN4cRI-Iuk69nmyVDyL9NPDj6bR7I7u9osTbR5UNv4BqpJa96ZhuOMvR7jkOXOoiOOgg3g3mvb48E3-K-fXfpMsGJ1KPI31aU1O64ZAkgzMlSDVtfWlrVuPJyBPZERAzxgQ35xhSur6c6fSqylNP8J_fFx_j7KZ3HPo5KvO9o4MrSw0nAv1wPbJ8Fo3PW5ZkmrxZL_uc1-nU");'></div>
+</div>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Nourishing Hair Oil</p>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal">$22.00</p>
+<button class="mt-2 text-sm text-herbal-green font-bold hover:underline">View Product</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300 ease-in-out" data-alt="A small amber bottle of calming essential oil next to a lavender sprig on a wooden surface." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBL_A2IdY7WrgK9dnPtjWn5mmliN76oslhys8czElm-d_GihYDOetGxrJYZaBE26AUmdf2fHtGl6JuGL39ZDZ9Je98AcUsegm035TYdjWW8FXPI0mwLA7RQ6ESGEtmzjKF2coa1RgBts5QrbbdfrS29kS60SVoFdIF2ZOrBcmKEb-nevt_EOsetgbbDEbmwJBqvvq9TDvTd1S8-aYbSOsckf1O5ouW64WZvrrEl_a1oYbOAlKyT71-oCH7bQelocTvbV2jKe5nbfCk");'></div>
+</div>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Calming Essential Oil</p>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal">$18.00</p>
+<button class="mt-2 text-sm text-herbal-green font-bold hover:underline">View Product</button>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3 group">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg overflow-hidden">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300 ease-in-out" data-alt="A bottle of organic turmeric capsules with loose turmeric powder and roots nearby." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAq-l97eB0PNowexoZBPrxUBsbPL-qwN3yrr1pSpsTSUXNAkrrVGc92LE4W4EbM_rGOMLB7WbZdubgX37LDcQ1E7dMIdyH63mcuAWfThFwSwn0MW_4Mr5aqHqKtPYhOnIHS1uEG8h-a-GCVqWln6p1hjcZcWeLztuVDXU6_TsVE5h6b1OOtargidjIOJbjjViORidPeU28dbtfWm4Z97HUh07syJa2-zd_HxJn61Q7SZHdoRYLtQpQ-LBBq5SXyET4S74JfBDZC3OE");'></div>
+</div>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark text-base font-medium leading-normal">Organic Turmeric Capsules</p>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm font-normal leading-normal">$25.00</p>
+<button class="mt-2 text-sm text-herbal-green font-bold hover:underline">View Product</button>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-subtle-light dark:bg-subtle-dark rounded-lg p-8 md:p-12 mx-4 my-10">
+<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+<div class="flex justify-center">
+<img alt="Ayurvedic products display" class="rounded-lg w-full max-w-sm h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtWsTMKXd8gn9reSzH8TUmM0Da1jefThtAY2xfJr14dRtVcotNGBFfabDpZCXEQ-kkLUDmZac3xzKavRgCp1Hvgelo1Vcxj5Ihjt05Z2e7T5NrSg0-vl_38l-vdGfiDoZWESeAaaYFaZ0PfhXD6p0Y7r5Y_VX-Cy0TVyrl9QKsfXbHncrjtBWboPK5ibcq9YX496hK4M30rRPkkQZyoQHT3Xjq46kKXp2OCgdIg7hNkP9-lKC8T9Dzd2-3i9mfc60_tttdTngs_Hg"/>
+</div>
+<div class="text-center md:text-left">
+<h2 class="text-2xl font-bold mb-4">The Heart of Ayurveda</h2>
+<p class="text-text-light dark:text-text-dark mb-6">Our mission is to bring the timeless wisdom of Ayurveda into modern life. We believe in the power of nature to heal and restore balance, offering pure, ethically sourced products that nourish the body, mind, and spirit. Embrace a life of wellness with traditions that have been cherished for centuries.</p>
+<a class="font-bold text-warm-orange hover:underline" href="#">Learn More</a>
+</div>
+</div>
+</section>
+<section class="p-4 md:p-8">
+<h2 class="text-text-light dark:text-text-dark text-center text-2xl font-bold leading-tight tracking-[-0.015em] mb-8">Words of Wellness</h2>
+<div class="relative max-w-2xl mx-auto text-center">
+<blockquote class="text-text-light dark:text-text-dark italic text-lg mb-4">"The Nourishing Hair Oil has completely transformed my hair. It's softer, stronger, and has never looked healthier. Truly a magical product!"</blockquote>
+<p class="font-bold">- Sarah L.</p>
+<div class="mt-6">
+<a class="font-bold text-herbal-green hover:underline" href="#">Read more testimonials</a>
+</div>
+</div>
+</section>
+<section class="py-12 px-4">
+<h2 class="text-2xl font-bold text-center mb-8">From Our Blog</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-screen-xl mx-auto">
+<div class="flex flex-col group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300 ease-in-out" data-alt="A bottle of Ashwagandha extract tincture." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCm_mtL8fOTozI3R2i9HCH8zPwz554jUY92-Mqc4LP6eMPiv-7P2V9iDkMH_589cNgco-rSFWuXlRE288Mv-pAHxGvQ9xL_kTANbPTH13ORXA_4tdso8AxyCVKO5OfP5rCkm7RzmQIld50LzDC3TDme8gX-id9FX8LHt2hNGT7Zoog2wNSGh2GddfpPPP-r0m5KLVAlPNn-43l4D40cjw5BzDTBwUd3Ucz3pfccStoMgUtApAG2kCN_jcCLb7k2BXrSJk4pezTWAew");'></div>
+</div>
+<h3 class="text-lg font-bold mb-2">The Benefits of Ashwagandha</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm mb-4">Discover how this ancient herb can help reduce stress and improve vitality.</p>
+<a class="font-bold text-warm-orange hover:underline" href="#">Read More</a>
+</div>
+<div class="flex flex-col group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300 ease-in-out" data-alt="A jar of Triphala powder with a wooden spoon." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbWbFhEUPv4BRHDbetgUZNq0oAF8J09N3RA-iufH-C685xMUYBtg7DHofJJRO66dg8PSv1hwGuNM1LhZXaNPpzlW0vFJm-DVY6HQH0UpKXl8AmRwzVMHhxFM3yCkdttl-WFndjCPQQnuPjcRyVyVXWB9pZzyeiV7F32G9VsXQSK-lYlybav5VDdXCIYhedgHd-rMnff1xetrpvYJhj4-E7TRsLp1f3_zYMhAjwE5H-Deh8quyDrRAZ2ZcyRkgp0QC6Y1nlunXGmvg");'></div>
+</div>
+<h3 class="text-lg font-bold mb-2">A Guide to Digestive Health</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm mb-4">Learn about Ayurvedic secrets to maintaining a happy and healthy gut.</p>
+<a class="font-bold text-warm-orange hover:underline" href="#">Read More</a>
+</div>
+<div class="flex flex-col group">
+<div class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg overflow-hidden mb-4">
+<div class="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-300 ease-in-out" data-alt="A copper tongue scraper on a clean white background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjMX_HY4BeTHzo48_GbyNcNOCGT8AJlaNColoa6HM-HpclErGJgzn7J1HiQ-ThTQcWXkqbA9U20Jpey5osTvisTlFLMI5lWmIM9zjTEMtNBWxvHxNeGbtyXKbwbRQ870Toh0M-yLmzwaicM6jHmhwtZvAFAawMJ9APAb0nHwKHyd1e7mIuSzxQfUDXOyb3eTiHfEYGFhJMTw0DOB8d0XvR2HajIBo9HO3RvrPnL4w7Zl053eA5oNp9G-gSeCY6LbcrZ5mRezBU3FU");'></div>
+</div>
+<h3 class="text-lg font-bold mb-2">Daily Rituals for a Balanced Life</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark text-sm mb-4">Simple practices you can incorporate into your daily routine for holistic well-being.</p>
+<a class="font-bold text-warm-orange hover:underline" href="#">Read More</a>
+</div>
+</div>
+</section>
+<section class="bg-subtle-light dark:bg-subtle-dark rounded-lg p-8 md:p-12 mx-4 text-center">
+<h3 class="text-xl md:text-2xl font-bold mb-2">Join Our Wellness Community</h3>
+<p class="text-subtle-text-light dark:text-subtle-text-dark mb-6">Receive wellness tips, exclusive offers, and new product alerts directly to your inbox.</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input class="form-input flex-grow w-full rounded-lg border-none bg-background-light dark:bg-background-dark placeholder:text-subtle-text-light dark:placeholder:text-subtle-text-dark text-text-light dark:text-text-dark focus:ring-2 focus:ring-warm-orange h-12 px-4" placeholder="Enter your email" type="email"/>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-herbal-green text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-all" type="submit">
+<span class="truncate">Subscribe</span>
+</button>
+</form>
+</section>
+</main>
+<footer class="mt-20 border-t border-subtle-light dark:border-subtle-dark pt-10 pb-8 px-4">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="size-5 text-herbal-green">
+<svg fill="currentColor" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4v2a2 2 0 002 2h12a2 2 0 002-2V4M8 8v12M16 8v12M4 20h16M7 4a4 4 0 014-2h2a4 4 0 014 2v0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<h2 class="text-base font-bold">Ayurveda Wellness</h2>
+</div>
+<p class="text-sm text-subtle-text-light dark:text-subtle-text-dark">Holistic products for a balanced life.</p>
+</div>
+<div>
+<h4 class="font-bold mb-4">Shop</h4>
+<ul class="space-y-2 text-sm text-subtle-text-light dark:text-subtle-text-dark">
+<li><a class="hover:text-warm-orange transition-colors" href="#">Skincare</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Haircare</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Supplements</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Teas</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">About</h4>
+<ul class="space-y-2 text-sm text-subtle-text-light dark:text-subtle-text-dark">
+<li><a class="hover:text-warm-orange transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Support</h4>
+<ul class="space-y-2 text-sm text-subtle-text-light dark:text-subtle-text-dark">
+<li><a class="hover:text-warm-orange transition-colors" href="#">Shipping Policy</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Returns</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-warm-orange transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">Follow Us</h4>
+<div class="flex space-x-4">
+<a class="text-subtle-text-light dark:text-subtle-text-dark hover:text-warm-orange transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+</svg>
+</a>
+<a class="text-subtle-text-light dark:text-subtle-text-dark hover:text-warm-orange transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+</svg>
+</a>
+<a class="text-subtle-text-light dark:text-subtle-text-dark hover:text-warm-orange transition-colors" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049 1.064.218 1.791.465 2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.793 2.013 10.147 2 12.315 2zm0 1.623c-2.387 0-2.691.01-3.638.056-.944.045-1.505.208-1.944.372a3.282 3.282 0 00-1.18 1.18c-.164.439-.327.999-.372 1.944-.046.947-.056 1.251-.056 3.638s.01 2.691.056 3.638c.045.944.208 1.505.372 1.944a3.282 3.282 0 001.18 1.18c.439.164.999.327 1.944.372.947.046 1.251.056 3.638.056s2.691-.01 3.638-.056c.944-.045 1.505-.208 1.944-.372a3.282 3.282 0 001.18-1.18c.164.439.327-.999.372-1.944.046-.947.056-1.251.056-3.638s-.01-2.691-.056-3.638c-.045-.944-.208-1.505-.372-1.944a3.282 3.282 0 00-1.18-1.18c-.439-.164-.999-.327-1.944-.372C15.006 3.633 14.702 3.623 12.315 3.623zM12 8.118c-2.147 0-3.882 1.735-3.882 3.882s1.735 3.882 3.882 3.882 3.882-1.735 3.882-3.882S14.147 8.118 12 8.118zm0 6.162c-1.258 0-2.28-1.022-2.28-2.28s1.022-2.28 2.28-2.28 2.28 1.022 2.28 2.28-1.022 2.28-2.28 2.28zm4.965-6.402a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-8 border-t border-subtle-light dark:border-subtle-dark pt-6 text-center text-sm text-subtle-text-light dark:text-subtle-text-dark">
+<p>© 2024 Ayurveda Wellness. All Rights Reserved.</p>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

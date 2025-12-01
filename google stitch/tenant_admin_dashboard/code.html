@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tenant Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#25ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#122210",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#122210] dark:text-[#f6f8f6]">
+<div class="flex h-screen">
+<!-- SideNavBar -->
+<aside class="flex w-64 flex-col border-r border-primary/20 bg-background-light dark:bg-background-dark p-4">
+<div class="flex items-center gap-3 p-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="VedaAdmin company logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAN_hErgFDuTKz1sbKHVti_nwk8hwr702Z-pOUJgUKlpAbhMtM-JaQQ_qV6uVI9crAbTLK7krxs1u4bNHiTaVmX46PI_5Un2OXzbwU4anKrDv1EkjqpBTmYlakX1H2qtY5iiuvEzxxRcOSt-JGKICwcsdEomr7FDS8GdvwcZzyo7_bGmg-PPdEcTccY3iFfxybTu2hFKDZ0PVJfQgRpEtJIIm9jYRPlu4ZDWOJFryk2KrvCcm33kFqKJ7PFCpC0CpLbpzqljQ8KZ5Y");'></div>
+<div class="flex flex-col">
+<h1 class="text-base font-bold text-[#122210] dark:text-[#f6f8f6]">VedaAdmin</h1>
+<p class="text-sm font-normal text-primary/80">Store Panel</p>
+</div>
+</div>
+<nav class="mt-8 flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg bg-primary/20 px-3 py-2 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-[#122210] dark:text-[#f6f8f6] hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined">spa</span>
+<p class="text-sm font-medium">Products</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-[#122210] dark:text-[#f6f8f6] hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-sm font-medium">Orders</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-[#122210] dark:text-[#f6f8f6] hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<p class="text-sm font-medium">Reports</p>
+</a>
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-[#122210] dark:text-[#f6f8f6] hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<p class="text-sm font-medium">Support</p>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-2">
+<a class="flex items-center gap-3 rounded-lg px-3 py-2 text-[#122210] dark:text-[#f6f8f6] hover:bg-primary/10" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto p-8">
+<div class="mx-auto max-w-7xl">
+<!-- PageHeading -->
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-col gap-1">
+<h1 class="text-4xl font-black tracking-tight text-[#122210] dark:text-[#f6f8f6]">Welcome, Tenant Name</h1>
+<p class="text-base font-normal text-primary/80">Here’s an overview of your Ayurveda store today.</p>
+</div>
+</div>
+<!-- Stats -->
+<div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+<div class="flex flex-col gap-2 rounded-xl border border-primary/20 bg-background-light p-6 dark:bg-background-dark/50">
+<p class="text-base font-medium text-[#122210] dark:text-[#f6f8f6]">Today's Revenue</p>
+<p class="text-3xl font-bold tracking-tight text-[#122210] dark:text-[#f6f8f6]">$1,250.75</p>
+<p class="text-sm font-medium text-green-600">+5.2%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-primary/20 bg-background-light p-6 dark:bg-background-dark/50">
+<p class="text-base font-medium text-[#122210] dark:text-[#f6f8f6]">Today's Orders</p>
+<p class="text-3xl font-bold tracking-tight text-[#122210] dark:text-[#f6f8f6]">42</p>
+<p class="text-sm font-medium text-green-600">+8.1%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-primary/20 bg-background-light p-6 dark:bg-background-dark/50">
+<p class="text-base font-medium text-[#122210] dark:text-[#f6f8f6]">Products Low in Stock</p>
+<p class="text-3xl font-bold tracking-tight text-[#122210] dark:text-[#f6f8f6]">8</p>
+<p class="text-sm font-medium text-red-500">-2.0%</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl border border-primary/20 bg-background-light p-6 dark:bg-background-dark/50">
+<p class="text-base font-medium text-[#122210] dark:text-[#f6f8f6]">New Customers</p>
+<p class="text-3xl font-bold tracking-tight text-[#122210] dark:text-[#f6f8f6]">15</p>
+<p class="text-sm font-medium text-green-600">+10.5%</p>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
+<!-- Main column with Table -->
+<div class="lg:col-span-2">
+<!-- SectionHeader -->
+<h2 class="text-2xl font-bold tracking-tight text-[#122210] dark:text-[#f6f8f6]">Recent Orders</h2>
+<!-- Table -->
+<div class="mt-4 overflow-hidden rounded-xl border border-primary/20 bg-background-light dark:bg-background-dark/50">
+<table class="min-w-full divide-y divide-primary/20">
+<thead class="bg-background-light dark:bg-background-dark/50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[#122210] dark:text-[#f6f8f6]" scope="col">Order ID</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[#122210] dark:text-[#f6f8f6]" scope="col">Customer Name</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[#122210] dark:text-[#f6f8f6]" scope="col">Order Date</th>
+<th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-[#122210] dark:text-[#f6f8f6]" scope="col">Status</th>
+<th class="px-6 py-3 text-right text-xs font-medium uppercase tracking-wider text-[#122210] dark:text-[#f6f8f6]" scope="col">Total Amount</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/20 bg-background-light dark:bg-background-dark">
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">#1025</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Anika Sharma</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Oct 26, 2023</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm"><span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900/50 dark:text-green-300">Delivered</span></td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">$89.90</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">#1024</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Rohan Desai</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Oct 26, 2023</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm"><span class="inline-flex items-center rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-medium text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">Shipped</span></td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">$45.50</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">#1023</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Priya Patel</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Oct 25, 2023</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm"><span class="inline-flex items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-300">Pending</span></td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">$112.00</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">#1022</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Vikram Singh</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Oct 25, 2023</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm"><span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900/50 dark:text-green-300">Delivered</span></td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">$34.75</td>
+</tr>
+<tr>
+<td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">#1021</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Meera Iyer</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm text-primary/90 dark:text-primary/70">Oct 24, 2023</td>
+<td class="whitespace-nowrap px-6 py-4 text-sm"><span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900/50 dark:text-green-300">Delivered</span></td>
+<td class="whitespace-nowrap px-6 py-4 text-right text-sm font-medium text-[#122210] dark:text-[#f6f8f6]">$76.20</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Side column with Alerts and Actions -->
+<div class="space-y-8">
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-[#122210] dark:text-[#f6f8f6]">Low Stock Alerts</h2>
+<div class="mt-4 flex flex-col gap-4 rounded-xl border border-primary/20 bg-background-light p-4 dark:bg-background-dark/50">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-medium text-[#122210] dark:text-[#f6f8f6]">Ashwagandha Capsules</p>
+<p class="text-sm text-red-500">2 units left</p>
+</div>
+<span class="material-symbols-outlined text-red-500">warning</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-medium text-[#122210] dark:text-[#f6f8f6]">Triphala Powder</p>
+<p class="text-sm text-red-500">3 units left</p>
+</div>
+<span class="material-symbols-outlined text-red-500">warning</span>
+</div>
+<a class="mt-2 w-full rounded-lg bg-primary/20 px-4 py-2 text-center text-sm font-semibold text-primary hover:bg-primary/30 dark:text-primary dark:hover:bg-primary/40" href="#">Manage Stock</a>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight text-[#122210] dark:text-[#f6f8f6]">Quick Actions</h2>
+<div class="mt-4 grid grid-cols-2 gap-4">
+<a class="flex flex-col items-center justify-center gap-2 rounded-xl border border-primary/20 bg-background-light p-6 text-center hover:bg-primary/10 dark:bg-background-dark/50 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-2xl text-primary">add_circle</span>
+<p class="text-sm font-semibold text-[#122210] dark:text-[#f6f8f6]">Add Product</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 rounded-xl border border-primary/20 bg-background-light p-6 text-center hover:bg-primary/10 dark:bg-background-dark/50 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-2xl text-primary">bar_chart</span>
+<p class="text-sm font-semibold text-[#122210] dark:text-[#f6f8f6]">View Reports</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 rounded-xl border border-primary/20 bg-background-light p-6 text-center hover:bg-primary/10 dark:bg-background-dark/50 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-2xl text-primary">receipt_long</span>
+<p class="text-sm font-semibold text-[#122210] dark:text-[#f6f8f6]">Manage Orders</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-2 rounded-xl border border-primary/20 bg-background-light p-6 text-center hover:bg-primary/10 dark:bg-background-dark/50 dark:hover:bg-primary/20" href="#">
+<span class="material-symbols-outlined text-2xl text-primary">storefront</span>
+<p class="text-sm font-semibold text-[#122210] dark:text-[#f6f8f6]">Customize Store</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
