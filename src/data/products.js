@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: 1,
+    name: 'Ashwagandha Churna',
+    category: 'Herbal Powders',
+    price: 12.99,
+    description: 'A rejuvenating herb that helps combat stress and anxiety.',
+    image: '/images/products/ashwagandha.jpg',
+    stock: 25,
+  },
+  {
+    id: 2,
+    name: 'Triphala Churna',
+    category: 'Herbal Powders',
+    price: 10.99,
+    description: 'A classic Ayurvedic formula for detoxification and rejuvenation.',
+    image: '/images/products/triphala.jpg',
+    stock: 15,
+  },
+  {
+    id: 3,
+    name: 'Brahmi Oil',
+    category: 'Herbal Oils',
+    price: 15.50,
+    description: 'A nourishing hair oil that promotes hair growth and calms the mind.',
+    image: '/images/products/brahmi-oil.jpg',
+    stock: 30,
+  },
+  {
+    id: 4,
+    name: 'Turmeric Forte',
+    category: 'Supplements',
+    price: 25.00,
+    description: 'A powerful anti-inflammatory and antioxidant supplement.',
+    image: '/images/products/turmeric-forte.jpg',
+    stock: 10,
+  },
+];
